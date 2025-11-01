@@ -1,0 +1,47 @@
+Make me an android and iOS app called SnowTeeth.
+
+SnowTeeth will start with a home page. There will be four large buttons that let you:
+- enter configuration mode
+- enter visualization mode
+- enter stats mode
+- toggle tracking
+
+Configuration mode will let you:
+- adjust velocity thresholds between these buckets:
+  1. Downhill hard (default 10 miles/h)
+  2. Downhill medium (default 6 miles/h)
+  3. Downhill easy (default 2 miles/h)
+  4. Idle
+  5. Uphill easy (default 1 miles/h)
+  6. Uphill medium (default 3 miles/h)
+  7. Uphill hard (default 5 miles/h)
+- When adjusting thresholds, they cannot overlap. i.e. the downhill medium threshold must be between the downhill hard and downhill easy threasholds. Uphill and downhill thresholds are not linked in this way, only easy/medium/hard.
+- Thresholds must be strictly positive.
+- toggle metric vs. imperial
+- set the visualization style. Choices will be:
+  - Flame
+  - Colors
+
+Visualization mode will:
+- automatically enable tracking if it is not already on
+- keep the screen from turning off
+- enter a full screen visualization
+- tap the screen to turn off visualization mode and return to the home screen
+- start reading from the gps, calculating the distance traveled every second, and using that to calculate which bucket the phone is currently in. Flat or uphill elevation changes go into the uphill buckets, while elevation decreases go into the downhill buckets.
+- display a different visualization depending upon the selected style. Write this section modularly, with an eye towards increasing the number of visuals in the future
+- For each velocity bucket, display a different thing. 
+  1. For Flame, display a colored triange. Hard gets a red triange, medium gets a yellow triangle, and easy gets a green triangle. Idle is a purple circle.
+  2. For Colors, display a solid background. Hard is red, medium is yellow, and easy is green. Idle is purple. Gradually fade colors as buckets are transitioned, so that when the velocity is halfway between medium and hard (yellow and red) the color would be orange.
+
+Toggle tracking will turn on tracking mode. When tracking:
+- the phone will continually gather gps readings every seconds
+- build a GPX file of these points, though only one point per 10 seconds needs to go into the file.
+
+Stats mode will examine the GPX file build and display:
+- cumulative vertical feet up
+- cumulative vertical feet down
+- horizonal distance
+- number of times the user went downhill. Combine pauses and small uphills into the same downhill descent.
+- number of times the user went uphill. Combine pasues and small downhills into the same uphill ascent.
+
+While building this app, make sure to make unit tests in order to make sure we don't break things as we expand it in the future.

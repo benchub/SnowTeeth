@@ -1,0 +1,20 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="576"
+    android:viewportHeight="512">
+    <!-- Orange square background with rounded corners -->
+    <path
+        android:fillColor="#FF9500"
+        android:pathData="M48,0L528,0A48,48 0,0 1,576 48L576,464A48,48 0,0 1,528 512L48,512A48,48 0,0 1,0 464L0,48A48,48 0,0 1,48 0z"/>
+    <!-- White trending down icon - scaled and centered -->
+    <group
+        android:pivotX="288"
+        android:pivotY="256"
+        android:scaleX="0.6"
+        android:scaleY="0.6">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M384,352c-17.7,0 -32,14.3 -32,32s14.3,32 32,32l160,0c17.7,0 32,-14.3 32,-32l0,-160c0,-17.7 -14.3,-32 -32,-32s-32,14.3 -32,32l0,82.7 -169.4,-169.4c-12.5,-12.5 -32.8,-12.5 -45.3,0L192,242.7 54.6,105.4c-12.5,-12.5 -32.8,-12.5 -45.3,0s-12.5,32.8 0,45.3l160,160c12.5,12.5 32.8,12.5 45.3,0L320,205.3 466.7,352 384,352z"/>
+    </group>
+</vector>

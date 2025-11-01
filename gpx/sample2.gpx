@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="GPXViewer Test">
+  <trk>
+    <name>Coastal Path</name>
+    <trkseg>
+      <trkpt lat="37.8000" lon="-122.5000">
+        <ele>5</ele>
+        <time>2024-01-02T14:00:00Z</time>
+      </trkpt>
+      <trkpt lat="37.8002" lon="-122.4998">
+        <ele>8</ele>
+        <time>2024-01-02T14:01:00Z</time>
+      </trkpt>
+      <trkpt lat="37.8005" lon="-122.4995">
+        <ele>12</ele>
+        <time>2024-01-02T14:02:00Z</time>
+      </trkpt>
+      <trkpt lat="37.8008" lon="-122.4992">
+        <ele>15</ele>
+        <time>2024-01-02T14:03:00Z</time>
+      </trkpt>
+      <trkpt lat="37.8012" lon="-122.4988">
+        <ele>20</ele>
+        <time>2024-01-02T14:04:00Z</time>
+      </trkpt>
+      <trkpt lat="37.8016" lon="-122.4984">
+        <ele>18</ele>
+        <time>2024-01-02T14:05:00Z</time>
+      </trkpt>
+      <trkpt lat="37.8020" lon="-122.4980">
+        <ele>22</ele>
+        <time>2024-01-02T14:06:00Z</time>
+      </trkpt>
+      <trkpt lat="37.8024" lon="-122.4976">
+        <ele>25</ele>
+        <time>2024-01-02T14:07:00Z</time>
+      </trkpt>
+      <trkpt lat="37.8028" lon="-122.4972">
+        <ele>30</ele>
+        <time>2024-01-02T14:08:00Z</time>
+      </trkpt>
+      <trkpt lat="37.8032" lon="-122.4968">
+        <ele>28</ele>
+        <time>2024-01-02T14:09:00Z</time>
+      </trkpt>
+      <trkpt lat="37.8036" lon="-122.4964">
+        <ele>32</ele>
+        <time>2024-01-02T14:10:00Z</time>
+      </trkpt>
+      <trkpt lat="37.8040" lon="-122.4960">
+        <ele>35</ele>
+        <time>2024-01-02T14:11:00Z</time>
+      </trkpt>
+      <trkpt lat="37.8044" lon="-122.4956">
+        <ele>38</ele>
+        <time>2024-01-02T14:12:00Z</time>
+      </trkpt>
+      <trkpt lat="37.8048" lon="-122.4952">
+        <ele>40</ele>
+        <time>2024-01-02T14:13:00Z</time>
+      </trkpt>
+      <trkpt lat="37.8052" lon="-122.4948">
+        <ele>42</ele>
+        <time>2024-01-02T14:14:00Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

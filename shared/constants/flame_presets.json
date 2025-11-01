@@ -1,0 +1,112 @@
+{
+  "description": "Flame visualization presets for velocity buckets - Updated for 2D fire shader",
+  "version": "2.0.0",
+  "algorithm": "2D fire shader based on 'One-Pass Fire' by @XorDev",
+  "presets": {
+    "idle": {
+      "speed": 0.2,
+      "intensity": 0.5,
+      "height": 0.33,
+      "colorShift": 0.5,
+      "baseWidth": 0.3,
+      "colorBlend": 1.77,
+      "description": "Small, dim, reddish flame with subtle movement"
+    },
+    "easy": {
+      "speed": 0.47,
+      "intensity": 1.98,
+      "height": 0.44,
+      "colorShift": 0.72,
+      "baseWidth": 0.3,
+      "colorBlend": 0.67,
+      "description": "Moderate orange flame with increased brightness"
+    },
+    "medium": {
+      "speed": 0.81,
+      "intensity": 0.67,
+      "height": 0.74,
+      "colorShift": 1.13,
+      "baseWidth": 0.51,
+      "colorBlend": 1.42,
+      "description": "Taller yellow-orange flame, wider base"
+    },
+    "hard": {
+      "speed": 1.36,
+      "intensity": 2.02,
+      "height": 0.58,
+      "colorShift": 1.73,
+      "baseWidth": 0.82,
+      "colorBlend": 1.13,
+      "description": "Very bright flame with hot colors, fast animation, wide base"
+    },
+    "alternateAscent": {
+      "speed": 0.88,
+      "intensity": 0.5,
+      "height": 0.1,
+      "colorShift": 1.36,
+      "baseWidth": 0.3,
+      "colorBlend": 1.62,
+      "description": "Alternate visualization for uphill sections - small, low flame with moderate temperature"
+    }
+  },
+  "parameterRanges": {
+    "speed": {
+      "min": 0.2,
+      "max": 1.4,
+      "description": "Animation speed multiplier (controls time offset)"
+    },
+    "intensity": {
+      "min": 0.5,
+      "max": 2.1,
+      "description": "Brightness/visibility of flames"
+    },
+    "height": {
+      "min": 0.1,
+      "max": 0.8,
+      "description": "Vertical extent (flame size)"
+    },
+    "colorShift": {
+      "min": 0.5,
+      "max": 1.8,
+      "description": "Temperature mapping (cooler→hotter colors: orange→yellow→green→cyan→blue→white)"
+    },
+    "baseWidth": {
+      "min": 0.3,
+      "max": 0.9,
+      "description": "Horizontal width at base"
+    },
+    "colorBlend": {
+      "min": 0.7,
+      "max": 1.8,
+      "description": "Core-to-edge color blending factor"
+    }
+  },
+  "bucketMapping": {
+    "IDLE": "idle",
+    "DOWNHILL_EASY": "easy",
+    "DOWNHILL_MEDIUM": "medium",
+    "DOWNHILL_HARD": "hard",
+    "UPHILL_EASY": "easy",
+    "UPHILL_MEDIUM": "medium",
+    "UPHILL_HARD": "hard"
+  },
+  "bucketMappingAlternateAscent": {
+    "IDLE": "idle",
+    "DOWNHILL_EASY": "easy",
+    "DOWNHILL_MEDIUM": "medium",
+    "DOWNHILL_HARD": "hard",
+    "UPHILL_EASY": "alternateAscent",
+    "UPHILL_MEDIUM": "alternateAscent",
+    "UPHILL_HARD": "alternateAscent"
+  },
+  "notes": [
+    "Updated for new 2D fire shader (v2.0.0) - removed old 3D raymarching parameters",
+    "Removed parameters: turbulence, detail, taper, twist, frequency",
+    "Added parameters: colorBlend",
+    "All buckets use the same preset except idle",
+    "Direction (uphill/downhill) does not affect flame visualization in normal mode",
+    "When alternate ascent mode is enabled, all uphill buckets use 'alternateAscent' preset",
+    "Transitions between presets should be smooth with interpolation",
+    "The new algorithm is significantly more efficient for low-end hardware"
+  ]
+}

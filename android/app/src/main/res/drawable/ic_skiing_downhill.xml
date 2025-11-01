@@ -1,0 +1,36 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Head -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M32,10m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+    <!-- Body leaning forward -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M28,15L22,28L26,30L32,18Z"/>
+    <!-- Front leg extended -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M22,28L18,36L20,37L24,29Z"/>
+    <!-- Back leg bent -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M26,30L28,38L30,37L28,29Z"/>
+    <!-- Ski poles -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M30,16L24,32"/>
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M26,14L16,34"/>
+    <!-- Skis -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M16,36L20,37L14,40L16,36Z"/>
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M26,38L30,37L24,42L26,38Z"/>
+</vector>

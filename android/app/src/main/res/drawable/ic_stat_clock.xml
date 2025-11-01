@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="576"
+    android:viewportHeight="512">
+    <!-- Blue square background with rounded corners -->
+    <path
+        android:fillColor="#007AFF"
+        android:pathData="M48,0L528,0A48,48 0,0 1,576 48L576,464A48,48 0,0 1,528 512L48,512A48,48 0,0 1,0 464L0,48A48,48 0,0 1,48 0z"/>
+    <!-- White clock icon - scaled to maintain circular aspect ratio -->
+    <!-- Viewport is 576x512 (1.125:1 ratio), rendered to square output (48dp x 48dp) -->
+    <!-- To keep clock circular, scale X by 1.125x more than Y -->
+    <group
+        android:translateX="144"
+        android:translateY="112">
+        <group
+            android:scaleX="20.25"
+            android:scaleY="18">
+            <path
+                android:fillColor="#FFFFFF"
+                android:pathData="M8,3.5a0.5,0.5 0,0 0,-1 0V9a0.5,0.5 0,0 0,0.252 0.434l3.5,2a0.5,0.5 0,0 0,0.496 -0.868L8,8.71z"/>
+            <path
+                android:fillColor="#FFFFFF"
+                android:pathData="M8,16A8,8 0,1 0,8 0a8,8 0,0 0,0 16m7,-8A7,7 0,1 1,1 8a7,7 0,0 1,14 0"/>
+        </group>
+    </group>
+</vector>

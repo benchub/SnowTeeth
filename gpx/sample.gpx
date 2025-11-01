@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="GPXViewer Test">
+  <trk>
+    <name>Sample Mountain Trail</name>
+    <trkseg>
+      <trkpt lat="37.7749" lon="-122.4194">
+        <ele>100</ele>
+        <time>2024-01-01T10:00:00Z</time>
+      </trkpt>
+      <trkpt lat="37.7750" lon="-122.4190">
+        <ele>110</ele>
+        <time>2024-01-01T10:02:00Z</time>
+      </trkpt>
+      <trkpt lat="37.7752" lon="-122.4185">
+        <ele>125</ele>
+        <time>2024-01-01T10:04:00Z</time>
+      </trkpt>
+      <trkpt lat="37.7755" lon="-122.4180">
+        <ele>145</ele>
+        <time>2024-01-01T10:06:00Z</time>
+      </trkpt>
+      <trkpt lat="37.7758" lon="-122.4175">
+        <ele>170</ele>
+        <time>2024-01-01T10:08:00Z</time>
+      </trkpt>
+      <trkpt lat="37.7762" lon="-122.4170">
+        <ele>200</ele>
+        <time>2024-01-01T10:10:00Z</time>
+      </trkpt>
+      <trkpt lat="37.7766" lon="-122.4165">
+        <ele>235</ele>
+        <time>2024-01-01T10:12:00Z</time>
+      </trkpt>
+      <trkpt lat="37.7770" lon="-122.4160">
+        <ele>275</ele>
+        <time>2024-01-01T10:14:00Z</time>
+      </trkpt>
+      <trkpt lat="37.7774" lon="-122.4155">
+        <ele>320</ele>
+        <time>2024-01-01T10:16:00Z</time>
+      </trkpt>
+      <trkpt lat="37.7778" lon="-122.4150">
+        <ele>350</ele>
+        <time>2024-01-01T10:18:00Z</time>
+      </trkpt>
+      <trkpt lat="37.7782" lon="-122.4145">
+        <ele>370</ele>
+        <time>2024-01-01T10:20:00Z</time>
+      </trkpt>
+      <trkpt lat="37.7785" lon="-122.4140">
+        <ele>380</ele>
+        <time>2024-01-01T10:22:00Z</time>
+      </trkpt>
+      <trkpt lat="37.7787" lon="-122.4135">
+        <ele>390</ele>
+        <time>2024-01-01T10:24:00Z</time>
+      </trkpt>
+      <trkpt lat="37.7789" lon="-122.4130">
+        <ele>395</ele>
+        <time>2024-01-01T10:26:00Z</time>
+      </trkpt>
+      <trkpt lat="37.7790" lon="-122.4125">
+        <ele>400</ele>
+        <time>2024-01-01T10:28:00Z</time>
+      </trkpt>
+      <trkpt lat="37.7791" lon="-122.4120">
+        <ele>398</ele>
+        <time>2024-01-01T10:30:00Z</time>
+      </trkpt>
+      <trkpt lat="37.7792" lon="-122.4115">
+        <ele>390</ele>
+        <time>2024-01-01T10:32:00Z</time>
+      </trkpt>
+      <trkpt lat="37.7793" lon="-122.4110">
+        <ele>375</ele>
+        <time>2024-01-01T10:34:00Z</time>
+      </trkpt>
+      <trkpt lat="37.7794" lon="-122.4105">
+        <ele>350</ele>
+        <time>2024-01-01T10:36:00Z</time>
+      </trkpt>
+      <trkpt lat="37.7795" lon="-122.4100">
+        <ele>320</ele>
+        <time>2024-01-01T10:38:00Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

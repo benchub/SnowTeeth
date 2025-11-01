@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_main.xml
+    Layout for the fire shader demo activity
+    Place in: app/src/main/res/layout/activity_main.xml
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Fire Shader View (fullscreen background) -->
+    <com.example.fireshader.FireShaderView
+        android:id="@+id/fireShaderView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Controls Overlay -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Toggle Button -->
+        <Button
+            android:id="@+id/toggleControlsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#80000000"
+            android:text="Show Controls"
+            android:textColor="@android:color/white" />
+
+        <!-- Controls Panel -->
+        <LinearLayout
+            android:id="@+id/controlsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#B0000000"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Fire Controls"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Speed Control -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Speed"
+                    android:textColor="@android:color/white" />
+                <TextView
+                    android:id="@+id/speedValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.00"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+            <SeekBar
+                android:id="@+id/speedSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:max="100" />
+
+            <!-- Intensity Control -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Intensity"
+                    android:textColor="@android:color/white" />
+                <TextView
+                    android:id="@+id/intensityValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.50"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+            <SeekBar
+                android:id="@+id/intensitySlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:max="100" />
+
+            <!-- Height Control -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Height"
+                    android:textColor="@android:color/white" />
+                <TextView
+                    android:id="@+id/heightValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.00"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+            <SeekBar
+                android:id="@+id/heightSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:max="100" />
+
+            <!-- Turbulence Control -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Turbulence"
+                    android:textColor="@android:color/white" />
+                <TextView
+                    android:id="@+id/turbulenceValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.00"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+            <SeekBar
+                android:id="@+id/turbulenceSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:max="100" />
+
+            <!-- Color Shift Control -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Color Shift"
+                    android:textColor="@android:color/white" />
+                <TextView
+                    android:id="@+id/colorShiftValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.00"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+            <SeekBar
+                android:id="@+id/colorShiftSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:max="100" />
+
+            <!-- Preset Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/campfireButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="Campfire"
+                    android:textSize="12sp" />
+                <Button
+                    android:id="@+id/infernoButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="Inferno"
+                    android:textSize="12sp" />
+                <Button
+                    android:id="@+id/resetButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Reset"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

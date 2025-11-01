@@ -1,0 +1,49 @@
+{
+  "description": "Mapping of velocity buckets to Yeti visualization states",
+  "version": "1.0.0",
+  "states": {
+    "0": {
+      "name": "idle",
+      "description": "Stationary or very slow movement"
+    },
+    "1": {
+      "name": "easy",
+      "description": "Light intensity activity"
+    },
+    "2": {
+      "name": "medium",
+      "description": "Moderate intensity activity"
+    },
+    "3": {
+      "name": "hard",
+      "description": "High intensity activity"
+    }
+  },
+  "bucketToStateMapping": {
+    "IDLE": 0,
+    "DOWNHILL_EASY": 1,
+    "UPHILL_EASY": 1,
+    "DOWNHILL_MEDIUM": 2,
+    "UPHILL_MEDIUM": 2,
+    "DOWNHILL_HARD": 3,
+    "UPHILL_HARD": 3
+  },
+  "notes": [
+    "Currently, uphill and downhill buckets of the same difficulty map to the same state",
+    "Future versions may distinguish between uphill and downhill with separate states",
+    "The algorithm supports up to 8 distinct states if needed"
+  ],
+  "videoNamingConvention": "{fromState} to {toState} {variant}.mp4",
+  "requiredTransitions": [
+    "0 to 0",
+    "0 to 1",
+    "1 to 0",
+    "1 to 1",
+    "1 to 2",
+    "2 to 1",
+    "2 to 2",
+    "2 to 3",
+    "3 to 2",
+    "3 to 3"
+  ]
+}

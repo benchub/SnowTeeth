@@ -1,0 +1,1067 @@
+version 3.8.5
+	01: src/windows.c: add test for "hidden" to determine if snow
+	       should fall on window.
+	    src/fallensnow.c: generate more fallensnow for first and last
+	       item of fallensnow.
+	    src/main.c: do not specify "dock" for the snow window.
+	       "dock" causes KDE PLASMA 6 to have the snow window always 
+	       on top.
+	    src/main.c, src/windows.c: add property "TRANSPARENCY" "YES"
+	       to snow window if transparent, else
+	       "TRANSPARENCY" "NO"
+	       so that other apps, like xpenguins, can determine if this
+	       window is to be ignored or not.
+	    src/fallensnow.c: transform blob into snow now and then.
+	       prevent direct accumulation of snow from transformed blob.
+	    src/snow.c: after about 2 seconds, make accumulation possible
+	       again.
+	    src/fallensnow.c: CreateSurfaceFromFallen(FallenSnow *f):
+	       fix bug with regard to the number of points to average.
+	       make height max height of fallensnow dependent on width.
+	    birds.c: lower default number of birds
+	    stars.c: if CIRCLESTARS is defined, paint circle-like stars
+	       suggestion by Mihai Dobrescu.
+	    doit.h: increase default nr of stars.
+	    ui.glade: increase max number of starts.
+	02: change snowtree.xpm and tree-1_100px.xpm (Thanks to Carla)
+	    Create halo around stars (thanks to Carla)
+	    Create src/transwindow.c: GetYOffset() to determine absolute
+	      value of y-coordinate of an window. This is used to properly
+	      size a snow window.
+	    flags.c: check value of Flags.ForceRoot before
+	      using gtk_builder_get_object().
+	    pofiles/*.po: update translations
+	    src/transwindow.c: force snow window to have 
+	       _NET_WM_WINDOW_TYPE(ATOM) = _NET_WM_WINDOW_TYPE_NORMAL
+	       by calling
+	       gdk_window_set_type_hint(gdkwin,GDK_WINDOW_TYPE_HINT_NORMAL);
+	03: src/main.c: HandleX11Cairo(): set SnowWinX, SnowWinY to 0,0 .
+	    In LXDE, monitor 0 and 1 are used correctly now.
+	04: bootstrap,pofiles/*.po: insert correct xsnow version in po/*.po.
+
+version 3.8.4
+	01: main.c: add code to stop if ~/.xsnowstop is present.
+	    test2.sh: get rid of kill, killall by using xvfb-run
+	    and touching ~/.xsnowstop when testing is done.
+	    main.c, flags,c: make them acceptable for c++.
+	02: adapt for loops to C99, except a few where the lopp variable 
+	    is used after the loop
+	    pofiles/nl.po: Some minor translation changes for nl.
+	    ui.glade: change step increment for nbirds from 5 to 1.
+	    Santa.c, xsnow.h: make SantaRegion global for use in fallensnow.c.
+	03: fallensnow.c: turn fallensnow in flakes for Santa occupied zones.
+	    ui.glade: remove donate button
+	    ui.glade: minor alignments of bottom buttons
+	04: snow.c: take care that start of fallensnow's are covered by snow
+	    by subtracting SnowSize from x-coordinate.
+	    fallensnow.c: do not smooth start and end points of fallensnow.
+	                  allow start and end-points >= 0.
+	    draw half circles at start and end to simulate snow overflow
+	    xsnow.h, fallensnow.c: every 30 seconds 0.3 change that desired
+	           height of fallen snow is re-established
+	05: fallensnow.c: let desired heights between 0.3 and 1.0
+	    fallensnow.c, aurora.c, main.c, wmctrl.c: removed some dead code
+
+version 3.8.3
+	01: with the exception of xdo.c:
+	    make 'gcc-14 -fanalyzer -O2 -Wno-analyzer-imprecise-fp-arithmetic' happy
+
+version 3.8.2
+	01: po/Makevars: disable changing .po and/or .pot files by
+	      po/Makefile.in.in
+	    configure.ac: Add flag --mode="a+rwX" to tar replacement to get reproducible 
+	      build.
+	    snow.c: fix a real bug: first EraseSnowFlake1(flake) and then
+	      DelFlake(flake), and not the other way around.
+	    main.c: do not printf() in sighandler
+
+version 3.8.1
+	01: xpm2cairo-gdk.c: use xpm2gdk() as replacement for deprecated 
+	    gdk_pixbuf_new_from_xpm_data().
+	02: ui.c: clicking on a tab in the headerbar triggers a call to
+	    WriteFlags().
+	03: main.c: Activation of WriteFlags now via do_write_flags() callback,
+	    which checks the value of global.time_to_write_flags.
+
+version 3.8.0
+	01: configure.ac: add warning if msgmerge is not found.
+	    In that case, no 'make dist' or 'xsnow -selfrep' is possible.
+	    data/xsnow.appdata.xml.in: make it conform "appstreamcli validate"
+	    xdo_search.c:37: Correct call to calloc, parameters were switched
+	02: test2.sh: Add tests: xsnow running in Xvfb, use xdotool to click buttons.
+	    Output screen locations of buttons to ~/.xsnowrc.
+	    main.c: Use SIGUSR1 to force rewrite of ~/.xsnowrc.
+	    This does not work in Debian's autopkgtest :-(.
+	    Makefile.am: make check only in src/
+	    src/{xdo.c,xdo.h,clientwin.c,clientwin.h,dsimple.c,dsimple.h,
+	         kdtree.c,kdtree.h,xdo_version.h,xdo_util.h,xdo_version.h} :
+		 remove GPL 3 license: these files had already an own license.
+	    src/xdo.c, configure.ac: remove dependency for libxkbcommon.
+
+version 3.7.9
+	01: ui.glade: make gui not-resizable to prevent wrong reported size when user
+	    tries to change size. 
+	    Thanks to Mark Capella for bringing this up.
+	02: windows.c, main.c, xsnow.h: when window is moved or resized, 
+	    convert fallensnow into flakes. Look for global.DoCapella.
+	    Thanks to Mark Capella for the idea.
+	03: ui.glade: change color pickers (snow, birds, vintage tree) to standard,
+	    the fancy color editor is still available using the '+' button.
+	04: main.c: take care that while changing OffsetY, fallensnow is not
+	    converted to flakes.
+	    xsnow.h, main.c: use macro DOCAPELLA for setting default.
+	05: meteor.c: better simulation of meteors.
+	06: generate flakes if window is minimized.
+	07: snow.c and others: optional: 2 snow colors, inspired by
+	      Mark Capella's plasmasnow.
+	    pofiles/: add translations for 2 snow colors.
+	    src/Makefile.am: specify dependencies of makeman.
+	08: adaptations for FreeBSD:
+	       use sh in stead of bash in bootstrap
+	       addcopyright.sh: adapt sed calls to FreeBSD's sed
+	       remove src/safe_malloc.c, adapt src/safe_malloc.h
+	        - safe_malloc.c was not used anyway
+	09: addcopyright.sh: use tmpfile="tmpfile" in stead of `mktemp`
+	    src/Makefile.am: minor: avoid $< because of FreeBSD's make
+
+version 3.7.8
+	01: src/Makefile.am: fix bug related with tarfile.inc which caused
+	    --disable-selfrep not working
+	    Thanks to Andrea Musuruane
+
+version 3.7.7
+	01: enable cross compiling
+	02: fix minor issue: version in man page
+
+version 3.7.6
+	01: correct spelling error in ChangeLog
+	    adapt for debian sid
+
+version 3.7.5
+	01: data/xsnow.desktop.in: add 'Simulation' to categories
+	02: main.c: make 'settings->lift snow on bottom', 
+	    -offsets working
+	    it appears that xdo_search uses the name argument as
+	    a regular expression, so use ^pcmanfm$ and ^Desktop$. 
+
+version 3.7.4
+	01: utils.c: fix bug in using xdo_search_windows(): the search
+	    parameter must be filled in completely (probably bug in
+	    xdo_search_windows)
+	02: flags.c, docs.c: add flags --root and --window-id 
+	    same as -root and -window-id for usage under xscreensaver
+	03: main.c: do_display_dimensions: put fflush() and return in proper
+	    order
+	    remove prevent-remakes
+	    utils.c: use memset to initialize xdo_search_t search
+	    bootstrap: rm -f po/*.gmo po/*.po
+	04: bootstrap: get rid of Makevars.template
+
+version 3.7.3
+	01: removed debug output
+version 3.7.2
+	01: make 'hide menu' button working in WM's that do not support
+	       iconify
+	    add xdo_search.c, make it g++ compilable
+	    ui.c: trivia to make it g++ compilable again
+	    windows.{c,h}, wmctrl.{c,h}: remove unused functions
+	    main.c, utils.{c,h}: use xdo function to find window "pcmanfm"
+	02: fix bug that caused error when configuring with --disable-selfrep
+	    
+version 3.7.1
+	01: choose between two moon colors (as suggested by Lewis Smith)
+	02: xsnow.h, Santa.c, Fallensnow.c: make Santa bidirectional
+	03: Makefile.am: add -DENABLE_NLS=1 where appropriate
+	04: correct moonseeking behaviour if Santa rides from right to left
+	    correct wind-dependency for R-L Santa
+	05: Santa.c: call init_Santa_surfaces only at initialisation
+	    scenery.c: fix bug which caused core dump when using external tree
+	06: Santa.c: reorder indices of Santa_surfaces.
+	07: Implement -treescale
+	08: Implement -santascale
+	09: ui.glade: avoid use of deprecated settings
+	10: adapt languages to changes, change ee.po in et.po
+	11: scenery.c: some code cleaning
+
+version 3.7.0
+	01: add contact button on welcome page and ratrabbit url in man page
+	    add gettext (using gettextize) (thanks to suggestion by
+	      Albano Battistella)
+	    add languages de en es fi fr it nl pt
+	    re-arrange programming of selfrep capability
+	    add 2023 to copyright
+	04: add more languages
+	    m4/gettext.m4: Upgrade to gettext-0.21.
+	    m4/host-cpu-c-abi.m4: New file, from gettext-0.21.
+	    m4/iconv.m4: Upgrade to gettext-0.21.
+	    m4/intlmacosx.m4: Upgrade to gettext-0.21.
+	    m4/lib-ld.m4: Upgrade to gettext-0.21.
+	    m4/lib-link.m4: Upgrade to gettext-0.21.
+	    m4/lib-prefix.m4: Upgrade to gettext-0.21.
+	    m4/nls.m4: Upgrade to gettext-0.21.
+	    m4/po.m4: Upgrade to gettext-0.21.
+	    m4/progtest.m4: Upgrade to gettext-0.21.
+	    configure.ac (AM_GNU_GETTEXT_VERSION): remove
+	    add gettext.h
+	    take appropriate action if no languages are available
+	       : no language button
+	    configure.ac, src/Makefile.am: trigger on USE_NLS macro
+	    simplemake.sh: some improvements
+	05: Santa.c: ResetSanta(): let Santa start somewhat left of the screen so
+	      that His (re-)appearance is a surprise, more or less
+	    ui.c: button_santa(), Santa.c: SantaVisible: when changing Santa,
+	      place Santa on a visibla area.
+
+
+version 3.6.1
+	01: add centos deps to file dependencies
+	    (thanks to Joachim Ruebenschuss)
+	02: src/Makefile.am: add PTHREAD_CFLAGS and PTHREAD_LIBS
+
+version 3.6.0
+	01: implement xinerama-awareness
+	   implement -outline
+	   introduce usage of libxdo, make it g++ compliant, fix some non-fatal
+	       issues
+	   fallensnow.c: fix bug that causes crash when snowing on a window
+	       less than 10 pixels width
+	   birds.c: fix bug that caused a hang when using -doublebuffer 0
+	   docs.c: update window manager/desktop issues
+	   main.c: print info when snow window changes size (thanks to Gim Kami)
+	   configure.ac: check for availability of gsl_interp_steffen, 
+	       gsl_interp_akima, gsl_interp_cspline and gsl_interp_linear
+	       (Thanks to Joachim Ruebenschuss)
+	   utils.c: somewhat nicer print-out of version
+
+version 3.5.3
+	01: main.c: drawit(): do now draw the first second or so to hide
+	    unstable configurations of scenery, stars, etc.
+	    fallensnow.c, birds.c, aurora.c: make them C++ compliant by
+	      rewriting goto and typecast pointer assignment
+	    meteor.c: rewrite goto
+	    santa.c: continue Santa animation, irrespective of His speed
+	    fallensnow.c: paint fallensnow one pixel higher
+	    fallensnow.c: generate more snow when Santa is ploughing
+	02: loadmeasure.c: maximum 5 warnings about to busy system
+	03: doit.h: change defaults for aurora_width/height to 60/30
+
+version 3.5.2
+	01: fallensnow.c: draw fallensnow only on regions where fallensnow is present,
+	    to prevent a continuously present line on regions where there is
+	    no fallensnow (yet)
+	02: main.c: when user changes offsety, call UpdateFallenSnowRegionsWithLock()
+	    in stead of UpdateFallenSnowRegions().
+	    fallensnow.c: on change of MaxScrSnowDepth, call
+	    SetMaxScreenSnowDepthWithLock() in stead of
+	    SetMaxScreenSnowDepth().
+	    snow.c: set fallensnow lock when examining fallensnow regions
+	       thus preventing prevents random crashes
+	    fallensnow.h a.o: create and use macros for semaphores to
+	    facilitate debugging
+
+version 3.5.1
+	01: configure.ac: reproducible build is now complete, it seems, also
+	    when building outside the xsnow-tree
+	02: aurora.c, spline_interpol.c: use steffen's method for splines
+	    aurora.c: small correction in determining the points to
+	              evaluate the splne at
+	03: spline_interpol.{h,c}, aurora.c: use macro SPLINE_INTERP to choose
+	    for spline type (steffen, cspline)
+	04: change some meteor code: other call-back logic, other
+	    names for variables (meteorite -> meteor)
+	05: change filenames meteo.c, meteo.h into meteor.c, meteor.h
+	    change flags -meteorites, -nometeorites into -meteors, -nometeors
+	    meteor.c: some minor changes, including different colors
+	06: snow.c: do_UpdateSnowFlake(): fix non-fatal bug in updating
+	       horizontal speed of flakes
+	    xsnow.c, snow.c: change some parameters for a more dramatic
+	       dependency from wind on flakes
+	    flag 'auroraheight' is now height of aurora
+	    flag 'aurorabase' determines the vertical placement of the aurora
+	07: fallensnow.c, treesnow.c: use random flake for blowoff snow
+	    fallensnow.c: change initial velocity and position of blowoff snow
+	08: fallensnow.c: use spline for desh shape of bottom fallensnow
+	    main.c: correct non-fatal bug in using srand48() for 32 bit systems
+	    snow.c: correct not-fatal bug: compare acth[] with desh[] in stead
+		     of h
+	    xsnow.h: change time_change_bottom to 10 minutes
+	09: use splines to paint fallensnow 
+	10: try pthreads for computing fallensnow
+	11: finish pthreads for fallensnow
+	12: aurora.c: do not use mutexes, use semaphores
+	              fix bug that caused creation of new threads after
+		      resizing of corona
+	13: fallensnow.c: use splines for fallensnow also on windows
+	14: birds.c: make birds multithreading
+	15: fallensnow.c, utils.{c,h}: check on availability of traceback()
+	    fallensnow.h: threads.h -> pthread.h
+
+version 3.5.0
+	1: add aurora
+	2: aurora.c: half implemented and disabled other method to handle sharp bends. 
+	3: windows.c: remove calls to DrawFallen()
+	   on second thought: use other method, combined with better code
+	4: optimized determining of fuzz somewhat
+	   set all horizontal scales to width 100
+	5: ui.xml: size all horizontal scales to 7 em
+	   aurora.c: add high frequency alpha to aurora 
+	6: implemented safe_malloc.{c.h} in a desperate try to get the 32 bit
+	   version running in amd64. No success.
+	   Add pthread.h at the start of every c,cpp file.
+	   main.c: initialize global.NewWind to 100.0
+	   Problems with 32 bit version were caused by optimization of the
+	      compiler and me not realizing the floating point arithmetic can 
+	      have some surprises, such as 64-bit and 80-bit compares.
+	      Problem solved by rearranging code in create_aurora_base().
+	7: aurora.c: allow arora surface to be somewhat wider than the screen
+	   and allow it start somewhat left of the screen
+	8: moon.c: randomize starting position from moon
+	   aurora.c: randomize starting theta and alpha of aurora
+	   aurora.c: adjust theta change, add slant change
+	   ixpm.c: correct two non fatal errors in scanf(... %100s...)
+	      thanks to dcb314 https://sourceforge.net/p/xsnow/tickets/11/
+	   docs.c: add va_end()
+	   wmctrl.c, birds.c: make cppcheck happy
+	   make all, except kdtree.c, cppcheck happy using a check after
+	      realloc()
+	   aurora.c: prevent too large vertical movements in position of aurora
+	10: add more random slant for aurora
+	11: aurora.c: create aurora_erase(), to be called in main() and when 
+	       changing the look of the aurora when no double buffering is
+	       available.
+	    fallensnow.c: do not call XClearArea when double buffer is used.
+	    doit.h: Change aurora defaults.
+	   
+
+version 3.4.4
+	1: birds.c: attraction point goes now from 0.1..0.9 of the horizontal 
+	   dimension of the screen
+	2: configure.ac: try to create a reproducible build:
+	   definition for DATE, re-timestamping the selfrep tar file
+	3: some enhancements with regard to 2:
+	4: main.c:  add some fflush(stdout)
+	   birds.c: take care that AttrSpace is always honored from the beginning
+	            When using as xscreensaver background, this was not the
+		    case
+	   xsnow.desktop.in: change Version into 1.0
+	
+version 3.4.3
+	1: enhance dependencies with Suse package names
+	   main.c, ui.c, flags,c, doit.h: solve bug concerning the flag -above
+	   Extend documentation about xsnow's behaviour in a few window
+	   managers.
+	   main.c: fix bug: Xsnow in TWM did start in non-existing window.
+	   utils.c: add some randomness to add_to_mainloop
+	2: implement -attrspace, including button and man page
+	   if Santa is not shown, let Him run anyway, so 'Follow Santa' has effect
+	3: somewhat better implementation of -attrspace
+version 3.4.2
+	1: fallensnow.c: other algorithm for drawing fallen snow
+	   Santa.c: Santa is now moon-seeking, also when birds are not showing 
+	      but only half of the time
+	3: fallensnow.c: fallen snow at the bottom changes shape every few
+	   minutes
+	4: no spikes anymore on top of fallensnow
+	   define minimum height of bottom fallensnow
+	   ui.c: set_default_tab(): remove memory leak
+	   fallensnow.c: CreateSurfaceFromFallen(): some minor details
+	5: fix issue that 'make install' always remakes selfrep.o
+	   selfrep.c: if sizeof(tarfile) < 1000 characters, assume that this 
+	      can be safely send to a tty
+version 3.4.1
+	1: ui.c: more checks on ui_running
+	2: configure.ac, Makefile.am, data: some small adaptions for
+	   freeBSD
+version 3.4.0
+	1: first try to add background to the xscreensaver mode:
+	   use ~/xsnowbackground.jpg
+	2: src:Makefile.am: remove .deps/* from CLEANFILES
+	   configure.ac: move execution of 'make dist' to the very end
+	   replace imagemagick for background with gtk/gdk
+	3: implement choose-background button
+	   xsnow.desktop: change version to 1.5, include xsnow-version 
+	   in comment
+	   implement flag -bg
+	4: xsnow.h: set time_snowflakes to 0.02 * global.cpufactor
+	   improve file selector for xscreensaver
+	   flags.c: add -treeoverlap and -notreeoverlap
+	            add -birdsscale
+		    add -transparency
+	   ui.xml: add corresponding command line flag to tooltips
+	5: remove all from libmagickwand
+	6: minor changes in xscreensaver menu
+	   prevent calling gtk_label_set_text() when there is no menu
+	7: ui.c: ui(): move setting of ui_running to start of ui(), in order
+	   to see version number in 'settings' tab
+version 3.3.6
+	1: selfrep.c, utils.c: better implementation of writing the tar ball.
+	2: windows.c: do_wupdate(): force update windows every 6th call
+	   implement -ignoretop -ignorebottom, inclusive buttons in 'snow'
+	   panel
+	3: some minor adjustments in the ui
+	4: snow.c: genxpmflake(): place first dot indeed in the middle (0,0)
+	   and not in a corner
+	   simplemake.sh: correct call to toascii.sh
+	5: windows.c: do_wupdate(): force update windows every 10th call
+	   xsnow.h: re-evaluated timings
+	   scenery.c: add ClearScreen() in do_initbaum()
+
+version 3.3.5
+	1: docs.c: document XFCE compositing requirement
+	2: implemented -selfrep
+	   adapted simplemake.sh
+
+version 3.3.4
+	1: flags.c: remove dependency from libxml2, .xsnowrc has now different
+	   format
+	   main.c: add check for existing colors for TreeColor, BirdsColor and 
+	           SnowColor
+	   doit.h: change colors "snow" and "chartreuse" into hex
+	   scenery.c: scenery_init(): sanitize Flags.TreeType
+
+version 3.3.3
+	1: add metainfo: data/xsnow.appdata.xml
+	   mv src/xsnow.desktop to data/xsnow.desktop
+	   add flag '-b' to awk in gen_ui_xml.sh
+	2: implement flag -changelog
+	   add some old ChangeLogs, found in the README of version 1.42
+	   gen_ui_xml.sh: remove flag '-b' from awk ('-b' only valid for gawk)
+	       return exit code of awk command
+	3: docs.c: document xcompmgr problem
+	   scenery.c: explicit convert (myScale*w+2) and (myScale*h+2)
+	     to int, to keep g++ happy.
+	   dependencies: made up-to-date
+	   simplemake.sh: made up-to-date
+	   moon.c: add #include <stdlib.h> for drand48
+
+version 3.3.2
+	remove redundant files maketar, makectags
+
+version 3.3.1
+	1:fix issues with LXDE desktop and xscreensaver
+
+version 3.3.0
+	1:replace transparent.{c,h} with maketrans.{c,h}
+	  add overall scale factor
+	  all drawings using cairo
+	  use xdbe (double buffer) when not using cairo
+	  moon and birds also when painting on root window
+	45: doit.h:default followsanta = 0
+	    windows.c: do not snow on window with exactly width=SnowWinWidth, x=0, y<100
+	47: sanitize scenery.c with respect to color of the vintage tree
+
+version 3.2.3
+	1:minor adaption in simplemake.sh
+	 :make use of VERSION in config.h
+	  adapt simplemake.sh 
+	6:ixpm.c: correct stupid bug in xpm_set_color()
+	7:remove UNUSED
+	9:extended range of XSelectInput somewhat
+	  change timing of do_wupdate to look more frequently if 
+	  something has changed
+
+version 3.2.2
+	1:change 'changes' into Flags.Changes
+	2:change gdkwindow -> NULL, several files
+	  ui.c: better behaviour of 'below windows' - 'confirm to click'
+	    combo
+	3:flags.c flags.h: separate FLAGS for default and vintage
+	  docs.c: some minor additions
+	4:buttons.h: change togglecode into scalecode
+	  flags.h uitils.h: transport some macro's
+	  ui.c: add documentation about flags and buttons
+	  main.c: optionally move windows to 0,0 (movewindow())
+	    Flags.MoveWindow --movewindow
+	5:some tweaks MoveWindow
+	6:more tweaks for MoveWindow
+	  Use also XConfigureWindow to set below or above. Now behaviour is
+	  OK when running in FVWM + xcompmgr or compton
+	  transparent.c: fixed 'show desktop' issue by re-adding:
+	     gdk_window_set_type_hint(gdk_window,GDK_WINDOW_TYPE_HINT_DOCK);
+	  wmctrl.c: add check for _NET_SHOWING_DESKTOP for visibility of
+	     windows
+	  windows.c: keep SnowWin below if Flags.BelowAll. Needed when SnowWin
+	    is not click-through.
+	7:add -theme flag. No button: too complicated for me.
+	9:make theme chooseable with a button
+	11:ui.c: minor tweaks
+
+version 3.2.1
+	1:utils.h: add fflush(NULL) to UIDO and UIDOS
+	  moon.c: create halo surface for painting.
+	2:fine tuning of ui graphics
+	3:start simplifying ui.c
+	11:finished 3:
+	12:doit.h flags.h: change DOIT macro's
+	13:docs.c:make it better
+	14:add option -hidemenu, add this to xsnow.desktop
+	   better format noisy output
+	   use #include "undefall.inc" to undef frquently used macros
+	15:simplify glade-id's
+	16:stratify ui.c code
+	17:stratify ui.c code
+	18:stratify ui.c code
+
+version 3.2.0
+	1:use 256x256 xpm for moon
+	  start Santa, aware of moon position
+	  adapt some trivial texts
+	2:add halo around moon
+	  add show-stars button
+	  add grey-out for moon buttons if not compositing manager
+	  add notice about that in the celestials tab
+	3:fix bug in moon.c: show moon, independent of birds
+	  some experiments with halo colours
+	4:moon.c: fix memory leak: halo_draw()
+	  docs.c: adapt man page
+	  ui.c: better way to grey out moon buttons 
+	  configure.ac: remove test for alloca, and tell kdtree.c not to use
+	     alloca
+	6:ui.c: remove malicious assert from report_tree_type()
+	  utils.h: create macros UIDO and UIDOS to better deal with
+	    if(Flags.x != OldFlags.x) ....
+	  many functions: replace construct above with UIDO or UIDOS
+	7:Ack in man page for picture of moon.
+
+version 3.1.10
+	1:add moon and show-noshow for moon
+	2:put wind, stars, moon, meteorites in celestials
+	  add slider for moon speed
+	3:add button for moon size
+	4:let Santa like to hover the moon
+
+version 3.1.9
+	1:place 'Xsnow running' to a place wher this does not appear in
+	  xsnow -h or xsnow-H
+	2:wmctrl.c: a second check if window is hidden, based on WM_STATE
+	  see: https://tronche.com/gui/x/icccm/sec-4.html#s-4.1.3.1
+	3: typos in docs.c
+	5:wmctrl.c: use XQueryTree to find windows to snow on if
+	  _NET and _GTK are not available.
+	  Use also XGetWindowAttributes to determine if a window
+	  is visible.
+	6:change max number of scenery items to 60
+	  wmctrl.c: use XGetWindowAttributes in stead of XGetGeometry
+
+version 3.1.8
+	1:use config.h to determine if alloca.h should be included
+	  configure.ac, Makefile.am: use pkg-config to locate 
+	  X11, Xpm, xt, xproto
+	2:configure.ac: remove tests for libraries, relying on pkg-config now
+	3:remove uses of alloca, except ik kdtree.c
+	  define USE_LIST_NODE_ALLOCATOR and  NO_ALLOCA in kdtree.c
+	  remove USE_LIST_NODE_ALLOCATOR from Makefile.am
+	  snow.c: free local variables in genxpmflake()
+
+version 3.1.7
+	1:windows.c: take care of redfining Rootwindow if xscreensaver
+	  is detected
+version 3.1.6
+	1:add xscreensaver support and vroot.h
+version 3.1.5
+	1:remove .png and .jpg from bootstrap and src/Pixmaps/ from tar.gz
+	2:main.c drawit(): draw stars and meteorites behind birds
+	3:fallensnow.c: GenerateFlakesFromFallen(): reduce the amount of
+	     generated snow 
+	  Changed info text by 'Blow off' slider.
+	4:src/Makefile.am: separate scripts for generating ui_xml.h and
+	     snow_includes.h
+	  Create script 'simplemake.sh', to be used on systems where the
+	    './configure;make;make install' suite does not work.
+version 3.1.4
+	1:remove AC_FUNC_MALLOC AC_FUNC_REALLOC AC_FUNC_ALLOCA from
+	   configure.ac (see comment there)
+	  Checked all malloc's, alloca's and realloc's for allocating >0 bytes
+version 3.1.3
+	1:add flag -showrudolph
+	  add flag -blowsnow
+	  remove FullScreen from .xsnowrc
+	  add flag -usebg
+	  add flag -snow
+	  add flag -nosnow
+	  add flag -showtrees
+	  add flag -wind
+	  add flag -keepsnowonwindows
+	  add flag -keepsnowonscreen
+	  add flag -keepsnowontrees
+	  add flag -keepsnow
+	  add flag -fluffy
+	  add flag -meteorites
+	  stratified version.h
+	  moved PrintVersion to utils.c
+version 3.1.2
+	1:hashtable.cpp: do not use 'auto'
+	  docs.c: added note about no menu when files are present in
+	  $HOME/xsnow/pixmaps
+	  Check on version of GTK. If too low, give option to start
+	    without ui.
+	2:simplify code for running without menu if level of GTK is too low
+	3:stratify above mentioned code
+version 3.1.1
+	moved debian stuff out of the distribution
+version 3.1.0
+	1:change version number
+	  some trivia in transparent.c
+	2:take care that only generated flakes are used when snow->defaults
+	3:snow flakes size adjustable
+	4:limit snowsize
+	  start snowflake always above window
+	  all generated snow xpm's: width multiple of 8
+	  also all off the vintage xpm's in Pixmaps
+	  change defaults for max number of flakes and blow-off to more humane
+	      numbers
+	5:use effective width for flakes (weff in snow.c)
+	  small changes in GenerateFlakesFromFallen()
+	  it appears that the height of an xpm should be >=2 to prevent
+	    terrible degradation of performance. snow.c: genxpmflake()
+	6:snow.h, snow.c: remove w and h from type Snow, these were redundant
+	7:changed some defaults and ranges
+	8:snow.c: reduce extra_flakes to 300. I have the impression that this
+	     is beneficial for cramped systems
+	  correct bug: blowoff.c: do not generate blow-off snow if Flags.NoSnowFlakes
+	9:utils.c: wrapper for cairo_paint_with_alpha(). If alpha > 0.9, use
+	     cairo_paint(). Seems to have some performance gain (less stress
+	     on Xorg), but I am not sure.
+	  main.c: hide gtk_widget TransB when not used.
+	          gray out transparency when running in fvwm-like environment
+	  added test2.sh for 'make check' and 'autopkgtest'
+	  GetCurrentWorkspace now always returns 0 if there are problems 
+	10:added tests using simulated mouse clicks, test2.sh and test3.sh
+	   xsnow reports now which Santa is chosen, needed for 
+	     'make check' and autopkgtest
+	   in Pixmaps: changed snowtree.xpm, eland.xpm, polarbear.xpm,
+	      huis4.xpm, AltSanta*.xpm to use one char to encode color
+	      using 'convert in.xpm -colors nn out.xpm'
+	11:removed references to test2.sh and test3.sh
+	   add flag '-noisy'
+	   corrected non fatal bugs in xpmtobits
+	   implemented 'birds follow Santa'
+	12:main.c: do_display_dimensions(): restart stars etc. not in the
+	   first call
+	   add scale button for 'Lift snow windows' == OffsetY
+	13:corrected handling of fluff in snow.c
+	   corrected: if !ShowBirds, Santa should be shown (main.c)
+	14:some fine tuning snow on trees
+	15:trivia in snow.h
+	16:fixed serious bug in snow.c which caused freezing
+	   snow flakes when changing size of flakes
+version 3.0.10
+	1:Better icons
+	2:better flakes
+	3:more flakes, auto generate snow includes and macro's for pixmaps.c
+	4:more flakes
+	5:more flakes
+	  birds.c: made attraction point transparent again
+	  ui.xml: remove separators from snow tab
+	7:get rid of snow??.xbm. Conversion from xpm is done with xpmtoxbm().
+	  rename snow*.xpm to flake*.xpm
+	8:next to the 7 archaic flakes, generate random flakes
+	  changed the addcopyright.sh script to only trigger on
+	  the first -copyright- line
+#-endcopyright-
+	9:some code clean up
+version 3.0.9
+	1:Windows.c: remove useless call to DisplayDimensions from do_wupdate()
+	2:fallensnow.c xsnow.h: shorter time between updates fallensnow
+	  better simulation of plowing
+	  3:snow.c: InitFlake takes now care of inserting flake in set
+	    of flakes
+version 3.0.8
+	1:check op _NET_WIM_WINDOW_TYPE_DOCK: do not fall snow on
+	  such a window
+	2:changed 0 -> NULL where appropriate
+	  insert __attribute__ ((unused)) via macro UNUSED where appropriate
+	3:create GetProperty32() in wmctrl.c
+	4:fallenshow.h: moved window-specific items in FallenSnow to
+	  FallenSnow.win
+	6:stratify windows.c
+	  transparent.c: make also click-through in draw callback
+	8:ask for confirmation before permanently de-activating 
+	  'Below windows'.
+	  Remove 'BelowAll' from .xsnowrc.
+	9:also in Cairo fluff
+	12:better display of blown snow
+	13:change code for going in and out full screen mode
+	   default is now full screen
+	   transparent.c: draw1(): remember two previous widgets in stead of
+	   one.
+	   removed full-screen button, see comment at Flags.FullScreen
+	   in main.c
+	14:Solution for refusing to go below windows: first
+	   ask the opposite.
+	15:Use absolute x,y coordinates for determining snow window placement
+	   and dimensions.
+	   Created a call back to check coordinates and dimensions of
+	   snowwindow once per second.
+	16:Changed css color for troughs.
+	   No flakes: no fallensnow, no fluff, no blowoff, no treesnow.
+	   Flakes blown off trees&window&bottom: smallest type of snow.
+	   Flakes from disappearing fallensnow: all types.
+	   Somewhat more randominess in generateflakesfromfallensnow
+	   in the x-value of the flakes. Better ploughing!
+	 17:yellow confirm button.
+	    Bigger logo santa.xpm
+	    Stratified MakeFlake-InitFlake combo.
+	    Corrected two typos in flags.c
+	 18:take care that trees are not placed partially right from screen
+	    removed -noquiet flag
+version 3.0.7
+	1:adapt hovertext for 'Below windows' button.
+	some code-cleanup
+version 3.0.6
+	1:Correct some typo's
+	Removed memory-leak in birds.c: birds_draw
+	birds.c: birds_draw: Correct position of birds by their width and height
+	2:Paint with transparency if ~Flags.BelowAll
+	3:No need for restart after changing below/above
+	4:introduction of transparency used by painting
+	fixed bug concerning removing trees
+	5:scenery.c: change definition of Tree to **Treeinfo and changed a few 
+	  lines accordingly
+	RedrawTrees now clears fallensnow on scenery
+	Change factor -> cpufactor
+	fallensnow.c: HandleFallenSnow: do not collect snow on bottom when Flags.NoKeepSBot
+	6:Changed actions at interrupt.
+	Removed unused CleanGC
+	transparent.c: simplified applying skip-taskbar-hint
+	               added skip-pager-hint
+version 3.0.5
+	New major release
+	transparent.c: Prevent icons for transparent windows showing up in taskbar
+	windows.c: no update of windows if not snowing on a desktop
+	DetermineWindow (windows.c): make sure IsDesktop is initialized
+	SigHandler (main.c): Nicer exit after interrupt.
+	Use execvp instead of execve restarting xsnow.
+	Stratified some code starting from main.c: drawit
+	wmctrl.c: also sticky=1 if (int)ws == -1
+	Adapt for uploading to debian
+version 3.0.4.30
+	Some trivial changes to settings tab.
+	Better handling of clicking BGColor button.
+	Removed root window choice.
+	Birds: set meanspeed before creation, not after.
+version 3.0.4.29
+	Gray out all birds buttons when appropriate
+version 3.0.4.28
+	In settings: gray out and make inactive not usable buttons
+version 3.0.4.27
+	better logic to determine what kind of windows are used
+	simplified ui settings window
+version 3.0.4.21
+	transparent.c: remove sticky hint for gdkwindow: this is ierreversible
+	made do_wupdate conform. Created windows.c. This is a mess, have to
+	look into it.
+version 3.0.4.20
+	ui: colors, and slight layout improvements
+	corrected error after going to full screen of behind windows
+	removed setting of kde background (kdesetbg)
+version 3.0.4.19
+	re-instated the stopafter functionality
+	ui: set colors
+version 3.0.4.18
+	added a warning for a too high system load
+version 3.0.4.17
+	convert snow_on_tree done, together with some other minor adjustments
+version 3.0.4.16
+	produce output with -h, -help, -H, -manpage, -v, -version without
+	    calling gtk_init()
+	made parsing of flags conformant with the docs: added -v
+	place test for wayland before gtk_init()
+	do not draw fallensnow when window is hidden (iconized)
+version 3.0.4.15
+	blowoff in standard
+	made timeout callbacks conform doc
+version 3.0.4.14
+	fallensnow in standard
+version 3.0.4.13
+	place gtk_init before handling the flags
+	changed code for 'on all workspaces' (settings)
+	do not collect snow if y <= 0
+	implemented part of standard form for fallensnow
+	  todo: snow disappears now from windows that show on all workspaces
+version 3.0.4.12
+	draw stars using surfaces
+version 3.0.4.11
+	added stdlkib.h where desirable
+version 3.0.4.10
+	stars done
+version 3.0.4.09
+	some minor things in snow.c
+version 3.0.4.08
+	wind done
+version 3.0.4.07
+	meteorite done
+version 3.0.4.06
+	snow in standard form for the major part
+version 3.0.4.05
+	start with snow in standard form.
+	hashtable.{cpp,h}: added set functions
+	turned macro's delflake and makeflake into functions
+	stratified declarations of xpm's (pixmap.(c,h}
+	added snow xpm's (it seems there is no standard function to convert
+	   bitmap to GdkPixbuf)
+	implemented canonical update of sreen, using gtk_widget_queue_draw()
+version 3.0.4.03/4
+	put birds in 'standard form'
+version 3.0.4.02
+	gtk-scenery working
+	use timeout time at computing birds position (contrary to 3.0.3)
+version 3.0.4.01
+	Santa.c: handle usage of user-defined Santa
+	if Flags.NoMenu: do not write to ui labels or make ui sticky/unsticky
+	Made start with gtk-ing scenery.
+version 3.0.3.01
+	All santa stuff moved from main.c to Santa.c
+	Added utils.c utils.h
+version 3.0.3-gtk-0.1
+	Santa runs in gtk
+version 3.0.3
+	birds.c: use actual time to compute bird positions instead of callback
+	time
+	birds.c: make speed adjustment of birds dependent on time elapsed
+	previous line: not a good idea, removed corresponding code
+	birds.c: more dramatic (re)start
+
+version 3.0.2
+	If birds not on active workspace, do not updte and paint them
+	Add 'extern' to all function prototypes for consistency.
+	Diversify debian/copyright
+
+version 3.0.1
+	make ui stickiness same as snow and birds windows
+	resolve some debian copyright issues in debian/copyright
+
+version 3.0.0
+	use wallcl()*1.0e6 to initialize drand48, not wallclock()
+	mv ui.glade ui.xml
+	add css to minimize ui.
+	add birds page, not functioning yet.
+	make xsnow compilable with g++
+	adding birds ....
+
+version 2.0.22
+	xsnow.desktop: in xfce icon does not show in
+	  panel: change 'xsnow.xpm' into 'xsnow'
+	do not show flake count when option -nomenu is given
+	fixed bug: when no desktop session can be determined
+	  from environment: make it 'unknown_desktop_session'
+	   - Thanks to Xose Vazquez Perez
+version 2.0.21
+	attempt better layout of settings screen
+	Somewhat better layout for all menus
+	Rudolf -> Rudolph in displayable strings
+	Show number of flakes in 'snow' tab
+	Added some id's in ui.glade
+version 2.0.20
+	replace timing loop with g_timeout_add()
+	add polarbear
+	use g_get_monotonic_time() for wallclock
+	give every snowflake its own g_timeout_add()
+	give Santa highest priority (not that it matters much, it seems)
+	Change fuse algorithm: now Updatesnowflake kills flake when number
+	  of flakes is above threshold
+	Initsnowflake: start y above above window
+	updatesnowflake: do not force y >=0
+	add button for flake-count-max
+	put refresh of trees in g_timeout_add()
+	idem for stars
+	Smooyth vertical movements of Santa
+	remove nosnowarea's. Replace nosnowarea_static by TreeRegion
+	reinstate nosnowarea_dynamic
+	fix issue with erasing flakes that are in a tree
+	if FlakeCount > max, high probabilty to remove blown-off flakes
+	all scales show now numerical value
+	removed -showstats option
+version 2.0.19
+	debian/tests/control: removed test2.sh
+version 2.0.18
+	main.c: test if WAYLAND_DISPLAY is set before setting GDK_BACKEND
+	main.c: restart after changing display settings 
+	main.c: no Thanks after man page or help
+	docs.c: minor adjustments
+	debug.h: added
+	main.c, flags.c: do not assume getenv("HOME") works as expected.
+version 2.0.17
+	main.c: The output of PrintVersion() appeared in the top of the man page.
+	   Corrected this.
+	main.c: CleanFallenArea() marked the fallensnow region always as clean,
+	   but this must be done only when whole x-range is cleared.
+version 2.0.16
+	dsimple.c: int screen = 0; -> static int screen = 0;
+	   and move to the top of the file. Ticket 1: gcc-10 related
+	transparent.c:
+	  keep xsnow visible after 'show desktop', and show xsnow on all 
+	  desktops
+	wmctrl.c: special care for compiz
+version 2.0.15
+	ui.glade: added 'Donate' button
+version 2.0.14
+	src/Makefile.am: use exec_prefix in stead of prefix for gamesdir
+	transparent.c: simplify creation of transparent window
+	main.c: removed use of SigHupHandler 
+	docs.c: corrected misspelled default values
+	test1.sh: check 'xsnow -h' if default values are substituted
+	main.c, ui.glade: better algorithm to determine number of flakes
+	    to generate
+version 2.0.13
+	main.c: do_genflakes(): take into account that do_genflakes()
+	   can be disabled by SnowRunning
+	flags.c: add forgotten -alpha flag
+version 2.0.12
+	pixmaps.c: corrected width and height for snow.
+	main.c: simplified create rectangular region
+	debian/copyright: corrected
+	main.c: remove flakes that fall below bottom of screen, also if
+	   no fallensnow on bottom
+	main.c: corrected bug which coaused no snow at all with -nomenu
+	Lower default snowspeed (SNOWSPEED in xsnow.h)
+	update snowflakes in chunks, so that other animations run at
+	   desired speed.
+	remove option -kde: settings are the same as for -gnome
+	do not add or delete flakes when updating snowflakes
+	   is running (test on SnowRunning)
+	for updatesanta, gensnowflakes, snowflakes: after a suspend
+	   or sleep the elapsed time can have a strange
+	   value. Take care of that.
+
+version 2.0.10
+	prepare for running in wayland by setting environment
+	  variable GDK_BACKEND=x11 (main.c)
+	fix some typo's in docs.c
+
+version 2.0.9
+	some debian adjustments
+	fix xfce problems: the workspace of the transparent
+	  snow window is not available in xfce
+	  some windows have both the _NET_FRAME_EXTENTS and
+	  _GTK_FRAME_EXTENTS. Priority is given to the latter.
+	Snowflakes that touch fallen snow are not erased any more:
+	  erasure caused bad looking effects.
+	Removed 'showstats' from config
+version 2.0.8
+	some more debian stuff
+	add support for xfce desktop
+version 2.0.7
+	added some debian stuff
+version 2.05
+	Fixed issues when trees are not shown: snow was still
+	collecting on trees, snow was not visible after not-shown
+	tree. 
+
+version 2.04
+	Fixed bug in main.c: check for valid return value of 
+	FindWindow() in do_wupdate().
+
+Version 2.03
+	Fixed bug in main.c: only set transworkspace if usingtrans.
+
+Version 2.02
+	Snowing halted when a workspade before the snow workspace was
+	removed. Fixed by checking the workspace of SnowWin in do_wupdate().
+
+Solved in 2.01
+	tree-xpm's are mirrored randomly
+	flag -treeregion implemented
+	fluff on bottom in snow window when nokeepsnowonscreen
+	parametrize MAXONTREES
+	implement vintage
+	in fvwm: after minimize window, no snow is shown on the
+	  window when it is restored. 
+	Handle window that is visible on all workspaces
+	implement no snow when window disappears
+	implement nowplow
+	Try to snow on trees
+	plowing should be partial: only take snow away where Santa was: Won't
+	fix
+	stars are competing with fallen snow: let snow win: Won't fix
+	Create precise region from bitmap vintage tree
+	Implement nokeepsnowonwindows etc
+	when wind: make generated flakes at bottom cyclic
+	Solved strange behaviour with system monitor window
+	  and others: gedit, nautilus etc. on gnome desktop
+	  no problem on fvwm desktop
+	find automatically desired offsets
+	  determine size of decoration from a partial screendump ?
+	  use xwininfo to point to a gauge window ?
+	no rounding of edges of fallen snow at the bottom
+	automatically determine tree regions
+	create 'fuse': remove nearly all flakes when number is really too high
+	for testing purposes: color a region see do_testing()
+	read tree.xpm from ~/xsnow/pixmaps/tree.xpm if present
+	let Santa plough through fallensnow: do not redraw fallen snow
+	   if overlap with Santa
+	faster update of fallen snow after move of window
+	animation of blown fallen  snow
+	extra snow not cyclic
+	get rid of flake.x and y, use only rx and ry
+	animation of snow fallen from disappeared windows
+	gracefully exit when window where is snowing in, disappears
+	let trees not overlap
+	fallensnow surfaces often too jerky
+	round snow at the edges
+	animation of do_clean
+	let Santa be affected by strong wind
+	replace old wind by storm now and then
+	offsets for windows & bottom
+	wind is changing continuously
+	cyclic disappear, appear of flakes
+	Solve floating point exception when starting in too small
+	  window (oclock) (div by 0 in RandInt)
+	move to other workspace of a window: bad behaviour:
+	  snow stays on original workspace, window does no
+	  receive snow any more: see put correct workspace in fallensnow areas
+	  in xsnow.c
+	snow on windows: implemented
+	ctrl-c sometimes causes: cannot parse output of wmctrl: solved by
+	  letting wmctrl return -1 in case of problems
+
+2019-01
+	A few minor changes after 1.42:
+	changed timing loop
+	find Desktop in Gnome and KDE
+	can run in user-pointed window (-xwininfo)
+	added another kind of tree
+	added starts
+	added meteorite
+	changed algorithm for fallen snow
+	nosnowarea's
+	and some more ...
+
+version 1.42 
+	Xsnow now works with KDE
+version 1.41 
+	-santaupdatefactor, fix for X-servers that use backing store, new
+	  Santa by Thomas Linder
+version 1.40 
+	-solidbg for improved performance, memory leak fixed.
+version 1.39 
+	usSleep fixed for VMS. Bug resulted in using too much resources.
+version 1.38 
+	Santa is a real snow plough now.
+version 1.37 
+	Offset for certain window managers like twm, nokeepsnowonwindows
+	and nokeepsnowonscreen are back.
+version 1.35 
+	Snow really builds up on windows now, and does not snow on pop-ups.
+version 1.32 
+	unsigned long snowDelay changed to long, as strtoul is troublesome
+version 1.31 
+	Make.com and xsnow.hlp for VMS
+version 1.30 
+	Performance improved. Wind.
+version 1.27 
+	Bug with erasing snow on top of windows removed
+	Erasing of snow at bottom of screen improved in case of expose event
+version 1.25 
+	Rudolf's red nose. Silly. Grmbll.
+	Bug with -nokeepsnowonwindows removed
+version 1.24 
+	Deleted PaintSnowAtBottom. It's more of a surprise this way.
+	Bug removed with windows off-screen to the left
+version 1.23
+	Aaaargh! gnu C doesn't like the initialization of the new
+	Santa pixmaps. Extra braces do the trick, which is so often the case
+version 1.22
+	Really building up snow at bottom of screen
+	A choice of Santa's. Thanks to Holger Veit (Holger.Veit@gmd.de)
+	for Santa no. 2. Santa 1 was derived from 2 by scaling down.

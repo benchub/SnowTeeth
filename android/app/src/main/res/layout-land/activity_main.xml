@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <!-- Row 1: SnowTeeth title centered -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SnowTeeth"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Row 2: Three blue buttons in horizontal layout -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnConfiguration"
+                style="@style/HomeButton"
+                android:layout_width="216dp"
+                android:text="Configuration"
+                android:layout_marginEnd="32dp"/>
+
+            <Button
+                android:id="@+id/btnVisualization"
+                style="@style/HomeButton"
+                android:layout_width="216dp"
+                android:text="Visualization"
+                android:layout_marginEnd="32dp"/>
+
+            <Button
+                android:id="@+id/btnStats"
+                style="@style/HomeButton"
+                android:layout_width="216dp"
+                android:text="Stats"/>
+
+        </LinearLayout>
+
+        <!-- Row 3: Share GPX and Toggle Tracking buttons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnShareGPX"
+                style="@style/HomeButton.Orange"
+                android:layout_width="216dp"
+                android:text="Share GPX"
+                android:layout_marginEnd="32dp"/>
+
+            <Button
+                android:id="@+id/btnToggleTracking"
+                style="@style/HomeButton.Green"
+                android:layout_width="216dp"
+                android:text="Start Tracking"
+                android:drawablePadding="8dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Snow effect overlay -->
+    <com.snowteeth.app.effects.SnowParticleView
+        android:id="@+id/snowParticleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- Santa flying animation -->
+    <com.snowteeth.app.effects.SantaView
+        android:id="@+id/santaView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

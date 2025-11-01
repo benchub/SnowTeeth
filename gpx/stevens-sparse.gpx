@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Gemini"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  
+  <metadata>
+    <name>A Plausible Ski Day at Stevens Pass (Detailed Runs)</name>
+    <desc>Includes walking from parking, lift lines, skiing popular runs (green, blue), pauses, and a lunch break. Ski run segments include points every ~30 seconds. Created on 2025-10-26.</desc>
+    <author>
+      <name>Gemini</name>
+    </author>
+  </metadata>
+
+  <trk>
+    <name>Stevens Pass Ski Day</name>
+    <desc>A full day of skiing, starting from the parking lot, hitting Daisy, Hogsback, Skyline, and Jupiter lifts, with a lunch break. Runs are detailed.</desc>
+    
+    <!-- Segment 1: Arriving - Walking from Parking Lot to Lodge (Sparse) -->
+    <trkseg>
+      <name>Walk from Parking Lot D to Granite Peaks Lodge</name>
+      <trkpt lat="47.74580" lon="-121.09050">
+        <ele>1236.0</ele> <!-- 4055 ft -->
+        <time>2025-10-26T16:45:00Z</time> <!-- 8:45 AM PDT (UTC-7) -->
+        <desc>Parked car in Lot D.</desc>
+      </trkpt>
+      <trkpt lat="47.74565" lon="-121.09000">
+        <ele>1237.0</ele>
+        <time>2025-10-26T16:46:00Z</time>
+        <desc>Walking with gear.</desc>
+      </trkpt>
+      <trkpt lat="47.74552" lon="-121.08950">
+        <ele>1238.0</ele> <!-- 4061 ft -->
+        <time>2025-10-26T16:47:00Z</time>
+        <desc>Arrived at Granite Peaks Lodge base area.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 2: Waiting for Daisy Lift (Sparse) -->
+    <trkseg>
+      <name>Lift Line: Daisy</name>
+      <trkpt lat="47.74540" lon="-121.08940">
+        <ele>1239.0</ele>
+        <time>2025-10-26T17:00:00Z</time> <!-- 9:00 AM - Lifts open! -->
+        <desc>Getting in line for Daisy.</desc>
+      </trkpt>
+      <trkpt lat="47.74542" lon="-121.08942">
+        <ele>1239.0</ele>
+        <time>2025-10-26T17:03:00Z</time>
+        <desc>Shuffling in line.</desc>
+      </trkpt>
+      <trkpt lat="47.74545" lon="-121.08945">
+        <ele>1239.0</ele>
+        <time>2025-10-26T17:05:00Z</time>
+        <desc>Loading Daisy Chair.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 3: Riding Daisy Lift (Sparse) -->
+    <trkseg>
+      <name>Lift Ride: Daisy</name>
+      <trkpt lat="47.74545" lon="-121.08945">
+        <ele>1239.0</ele>
+        <time>2025-10-26T17:05:10Z</time>
+        <desc>On Daisy lift.</desc>
+      </trkpt>
+      <trkpt lat="47.74450" lon="-121.08910">
+        <ele>1300.0</ele>
+        <time>2025-10-26T17:07:00Z</time>
+      </trkpt>
+      <trkpt lat="47.74380" lon="-121.08880">
+        <ele>1332.0</ele> <!-- 4370 ft -->
+        <time>2025-10-26T17:09:00Z</time>
+        <desc>Unloading Daisy.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 4: Skiing Run 1 (Easy Street) (Detailed) -->
+    <trkseg>
+      <name>Ski Run: Easy Street (Warm-up)</name>
+      <trkpt lat="47.74380" lon="-121.08880">
+        <ele>1332.0</ele>
+        <time>2025-10-26T17:09:30Z</time>
+        <desc>Starting down Easy Street.</desc>
+      </trkpt>
+      <trkpt lat="47.74405" lon="-121.08888">
+        <ele>1317.0</ele>
+        <time>2025-10-26T17:10:00Z</time>
+      </trkpt>
+      <trkpt lat="47.74430" lon="-121.08896">
+        <ele>1301.0</ele>
+        <time>2025-10-26T17:10:30Z</time>
+      </trkpt>
+      <trkpt lat="47.74455" lon="-121.08904">
+        <ele>1286.0</ele>
+        <time>2025-10-26T17:11:00Z</time>
+      </trkpt>
+      <trkpt lat="47.74480" lon="-121.08912">
+        <ele>1270.0</ele>
+        <time>2025-10-26T17:11:30Z</time>
+      </trkpt>
+      <trkpt lat="47.74505" lon="-121.08920">
+        <ele>1255.0</ele>
+        <time>2025-10-26T17:12:00Z</time>
+      </trkpt>
+      <trkpt lat="47.74530" lon="-121.08930">
+        <ele>1240.0</ele>
+        <time>2025-10-26T17:12:30Z</time>
+        <desc>Back to Daisy base.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 5: Waiting for Hogsback Express (Sparse) -->
+    <trkseg>
+      <name>Lift Line: Hogsback Express</name>
+      <trkpt lat="47.74510" lon="-121.08850">
+        <ele>1240.0</ele>
+        <time>2025-10-26T17:14:00Z</time>
+        <desc>Getting in line for Hogsback.</desc>
+      </trkpt>
+      <trkpt lat="47.74512" lon="-121.08852">
+        <ele>1240.0</ele>
+        <time>2025-10-26T17:19:00Z</time>
+        <desc>Moving up in the line.</desc>
+      </trkpt>
+      <trkpt lat="47.74515" lon="-121.08855">
+        <ele>1241.0</ele>
+        <time>2025-10-26T17:22:00Z</time>
+        <desc>Loading Hogsback Express.</desc>
+      </trkpt>
+    </trkseg>
+    
+    <!-- Segment 6: Riding Hogsback Express (Sparse) -->
+    <trkseg>
+      <name>Lift Ride: Hogsback Express</name>
+      <trkpt lat="47.74515" lon="-121.08855">
+        <ele>1241.0</ele>
+        <time>2025-10-26T17:22:10Z</time>
+      </trkpt>
+      <trkpt lat="47.74100" lon="-121.09100">
+        <ele>1380.0</ele>
+        <time>2025-10-26T17:25:00Z</time>
+      </trkpt>
+      <trkpt lat="47.73700" lon="-121.09400">
+        <ele>1480.0</ele> <!-- 4855 ft -->
+        <time>2025-10-26T17:28:00Z</time>
+        <desc>Unloading Hogsback.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 7: Skiing Run 2 (Rock'n Blue) (Detailed) -->
+    <trkseg>
+      <name>Ski Run: Rock'n Blue</name>
+      <trkpt lat="47.73700" lon="-121.09400">
+        <ele>1480.0</ele>
+        <time>2025-10-26T17:28:30Z</time>
+        <desc>Starting down Rock'n Blue.</desc>
+      </trkpt>
+      <trkpt lat="47.73811" lon="-121.09328">
+        <ele>1446.0</ele>
+        <time>2025-10-26T17:29:00Z</time>
+      </trkpt>
+      <trkpt lat="47.73922" lon="-121.09257">
+        <ele>1411.0</ele>
+        <time>2025-10-26T17:29:30Z</time>
+      </trkpt>
+      <trkpt lat="47.74033" lon="-121.09185">
+        <ele>1377.0</ele>
+        <time>2025-10-26T17:30:00Z</time>
+        <desc>Mid-run.</desc>
+      </trkpt>
+      <trkpt lat="47.74144" lon="-121.09114">
+        <ele>1343.0</ele>
+        <time>2025-10-26T17:30:30Z</time>
+      </trkpt>
+      <trkpt lat="47.74255" lon="-121.09042">
+        <ele>1308.0</ele>
+        <time>2025-10-26T17:31:00Z</time>
+      </trkpt>
+      <trkpt lat="47.74366" lon="-121.08971">
+        <ele>1274.0</ele>
+        <time>2025-10-26T17:31:30Z</time>
+      </trkpt>
+      <trkpt lat="47.74480" lon="-121.08900">
+        <ele>1240.0</ele>
+        <time>2025-10-26T17:32:00Z</time>
+        <desc>Back to base area.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 8: Waiting for Skyline Express (Sparse) -->
+    <trkseg>
+      <name>Lift Line: Skyline Express</name>
+      <trkpt lat="47.74480" lon="-121.08750">
+        <ele>1242.0</ele>
+        <time>2025-10-26T17:34:00Z</time>
+        <desc>Getting in line for Skyline.</desc>
+      </trkpt>
+      <trkpt lat="47.74482" lon="-121.08752">
+        <ele>1242.0</ele>
+        <time>2025-10-26T17:40:00Z</time>
+        <desc>Longer line for the main lift.</desc>
+      </trkpt>
+      <trkpt lat="47.74485" lon="-121.08755">
+        <ele>1243.0</ele>
+        <time>2025-10-26T17:44:00Z</time>
+        <desc>Loading Skyline Express.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 9: Riding Skyline Express (Sparse) -->
+    <trkseg>
+      <name>Lift Ride: Skyline Express</name>
+      <trkpt lat="47.74485" lon="-121.08755">
+        <ele>1243.0</ele>
+        <time>2025-10-26T17:44:10Z</time>
+      </trkpt>
+      <trkpt lat="47.73900" lon="-121.09200">
+        <ele>1450.0</ele>
+        <time>2025-10-26T17:47:00Z</time>
+      </trkpt>
+      <trkpt lat="47.73400" lon="-121.09700">
+        <ele>1609.0</ele> <!-- 5280 ft -->
+        <time>2025-10-26T17:51:00Z</time>
+        <desc>Unloading Skyline (Top of Cowboy Mtn).</desc>
+      </trkpt>
+    </trkseg>
+    
+    <!-- Segment 10: Skiing Run 3 (Skyline) with a pause (Detailed) -->
+    <trkseg>
+      <name>Ski Run: Skyline (with pause)</name>
+      <trkpt lat="47.73400" lon="-121.09700">
+        <ele>1609.0</ele>
+        <time>2025-10-26T17:51:30Z</time>
+        <desc>Starting down Skyline.</desc>
+      </trkpt>
+      <trkpt lat="47.73500" lon="-121.09650">
+        <ele>1569.0</ele>
+        <time>2025-10-26T17:52:00Z</time>
+      </trkpt>
+      <trkpt lat="47.73600" lon="-121.09600">
+        <ele>1529.0</ele>
+        <time>2025-10-26T17:52:30Z</time>
+      </trkpt>
+      <trkpt lat="47.73700" lon="-121.09500">
+        <ele>1489.0</ele>
+        <time>2025-10-26T17:53:00Z</time>
+      </trkpt>
+      <trkpt lat="47.73800" lon="-121.09400">
+        <ele>1449.0</ele>
+        <time>2025-10-26T17:53:30Z</time>
+        <desc>Mid-run, nice carving.</desc>
+      </trkpt>
+      <trkpt lat="47.73900" lon="-121.09250">
+        <ele>1419.0</ele>
+        <time>2025-10-26T17:54:00Z</time>
+      </trkpt>
+      <trkpt lat="47.74000" lon="-121.09150">
+        <ele>1400.0</ele>
+        <time>2025-10-26T17:54:30Z</time>
+      </trkpt>
+      <!-- This is the pause mid-run -->
+      <trkpt lat="47.74001" lon="-121.09151">
+        <ele>1400.0</ele>
+        <time>2025-10-26T17:55:00Z</time>
+        <desc>Paused mid-run to check view.</desc>
+      </trkpt>
+      <trkpt lat="47.74002" lon="-121.09152">
+        <ele>1400.0</ele>
+        <time>2025-10-26T17:57:00Z</time>
+        <desc>Still paused, waiting for friend.</desc>
+      </trkpt>
+      <trkpt lat="47.74003" lon="-121.09153">
+        <ele>1400.0</ele>
+        <time>2025-10-26T17:59:00Z</time>
+        <desc>Starting again.</desc>
+      </trkpt>
+      <!-- End pause -->
+      <trkpt lat="47.74150" lon="-121.09000">
+        <ele>1350.0</ele>
+        <time>2025-10-26T17:59:30Z</time>
+      </trkpt>
+      <trkpt lat="47.74250" lon="-121.08900">
+        <ele>1310.0</ele>
+        <time>2025-10-26T18:00:00Z</time>
+      </trkpt>
+      <trkpt lat="47.74350" lon="-121.08800">
+        <ele>1270.0</ele>
+        <time>2025-10-26T18:00:30Z</time>
+      </trkpt>
+      <trkpt lat="47.74470" lon="-121.08740">
+        <ele>1242.0</ele>
+        <time>2025-10-26T18:01:00Z</time>
+        <desc>Back to Skyline base.</desc>
+      </trkpt>
+    </trkseg>
+    
+    <!-- Segment 11: One more Skyline lap (Sparse Lift, Detailed Run) -->
+    <trkseg>
+      <name>Lift Line: Skyline (Lap 2)</name>
+      <trkpt lat="47.74480" lon="-121.08750">
+        <ele>1242.0</ele>
+        <time>2025-10-26T18:03:00Z</time>
+      </trkpt>
+      <trkpt lat="47.74485" lon="-121.08755">
+        <ele>1243.0</ele>
+        <time>2025-10-26T18:10:00Z</time>
+        <desc>Loading Skyline Express.</desc>
+      </trkpt>
+    </trkseg>
+    <trkseg>
+      <name>Lift Ride: Skyline (Lap 2)</name>
+      <trkpt lat="47.73400" lon="-121.09700">
+        <ele>1609.0</ele>
+        <time>2025-10-26T18:17:00Z</time>
+        <desc>Unloading Skyline.</desc>
+      </trkpt>
+    </trkseg>
+    <trkseg>
+      <name>Ski Run: Barrier Ridge (Lap 2)</name>
+      <trkpt lat="47.73400" lon="-121.09700">
+        <ele>1609.0</ele>
+        <time>2025-10-26T18:17:30Z</time>
+        <desc>Trying Barrier Ridge.</desc>
+      </trkpt>
+       <trkpt lat="47.73550" lon="-121.09600">
+        <ele>1550.0</ele>
+        <time>2025-10-26T18:18:00Z</time>
+      </trkpt>
+      <trkpt lat="47.73700" lon="-121.09500">
+        <ele>1490.0</ele>
+        <time>2025-10-26T18:18:30Z</time>
+      </trkpt>
+      <trkpt lat="47.73900" lon="-121.09350">
+        <ele>1430.0</ele>
+        <time>2025-10-26T18:19:00Z</time>
+      </trkpt>
+      <trkpt lat="47.74100" lon="-121.09100">
+        <ele>1360.0</ele>
+        <time>2025-10-26T18:19:30Z</time>
+      </trkpt>
+      <trkpt lat="47.74300" lon="-121.08900">
+        <ele>1290.0</ele>
+        <time>2025-10-26T18:20:00Z</time>
+      </trkpt>
+      <trkpt lat="47.74470" lon="-121.08740">
+        <ele>1242.0</ele>
+        <time>2025-10-26T18:20:30Z</time>
+        <desc>Back to base area. Time for lunch!</desc>
+      </trkpt>
+    </trkseg>
+    
+    <!-- Segment 12: Lunch Break at Lodge (Sparse) -->
+    <trkseg>
+      <name>Lunch at Granite Peaks Lodge</name>
+      <trkpt lat="47.74500" lon="-121.08800">
+        <ele>1242.0</ele>
+        <time>2025-10-26T18:21:00Z</time>
+        <desc>Walking to lodge.</desc>
+      </trkpt>
+      <trkpt lat="47.74552" lon="-121.08950">
+        <ele>1238.0</ele>
+        <time>2025-10-26T18:23:00Z</time>
+        <desc>Inside Granite Peaks Lodge.</desc>
+      </trkpt>
+      <!-- This is the lunch break. The GPS will "sit" in one spot. -->
+      <trkpt lat="47.74553" lon="-121.08951">
+        <ele>1241.0</ele> <!-- Went upstairs -->
+        <time>2025-10-26T18:25:00Z</time>
+        <desc>Getting food.</desc>
+      </trkpt>
+      <trkpt lat="47.74555" lon="-121.08955">
+        <ele>1241.0</ele>
+        <time>2025-10-26T18:55:00Z</time>
+        <desc>Eating lunch.</desc>
+      </trkpt>
+      <trkpt lat="47.74552" lon="-121.08950">
+        <ele>1238.0</ele>
+        <time>2025-10-26T19:15:00Z</time>
+        <desc>Finished lunch, getting gear back on.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- === NEW BACKSIDE SECTION START === -->
+
+    <!-- Segment 13: To the Backside - Hogsback L1 -->
+    <trkseg>
+      <name>Lift Line: Hogsback Express</name>
+      <trkpt lat="47.74510" lon="-121.08850">
+        <ele>1240.0</ele>
+        <time>2025-10-26T19:20:00Z</time>
+        <desc>Getting in line for Hogsback (to get to Tye Mill).</desc>
+      </trkpt>
+      <trkpt lat="47.74515" lon="-121.08855">
+        <ele>1241.0</ele>
+        <time>2025-10-26T19:25:00Z</time>
+        <desc>Loading Hogsback Express.</desc>
+      </trkpt>
+    </trkseg>
+    
+    <!-- Segment 14: To the Backside - Hogsback L1 Ride -->
+    <trkseg>
+      <name>Lift Ride: Hogsback Express</name>
+      <trkpt lat="47.74515" lon="-121.08855">
+        <ele>1241.0</ele>
+        <time>2025-10-26T19:25:10Z</time>
+      </trkpt>
+      <trkpt lat="47.74100" lon="-121.09100">
+        <ele>1380.0</ele>
+        <time>2025-10-26T19:28:00Z</time>
+      </trkpt>
+      <trkpt lat="47.73700" lon="-121.09400">
+        <ele>1480.0</ele>
+        <time>2025-10-26T19:31:00Z</time>
+        <desc>Unloading Hogsback.</desc>
+      </trkpt>
+    </trkseg>
+    
+    <!-- Segment 15: To the Backside - Ski to Tye Mill -->
+    <trkseg>
+      <name>Ski Run: Hagen Hill (to Tye Mill)</name>
+      <trkpt lat="47.73700" lon="-121.09400">
+        <ele>1480.0</ele>
+        <time>2025-10-26T19:31:30Z</time>
+        <desc>Skiing from Hogsback top to Tye Mill base.</desc>
+      </trkpt>
+      <trkpt lat="47.73750" lon="-121.09250">
+        <ele>1440.0</ele>
+        <time>2025-10-26T19:32:30Z</time>
+      </trkpt>
+      <trkpt lat="47.73800" lon="-121.09100">
+        <ele>1400.0</ele>
+        <time>2025-10-26T19:33:30Z</time>
+        <desc>Arrived at Tye Mill base.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 16: To the Backside - Tye Mill Line -->
+    <trkseg>
+      <name>Lift Line: Tye Mill</name>
+      <trkpt lat="47.73800" lon="-121.09100">
+        <ele>1400.0</ele>
+        <time>2025-10-26T19:34:00Z</time>
+        <desc>Getting in line for Tye Mill.</desc>
+      </trkpt>
+      <trkpt lat="47.73805" lon="-121.09105">
+        <ele>1401.0</ele>
+        <time>2025-10-26T19:39:00Z</time>
+        <desc>Loading Tye Mill.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 17: To the Backside - Tye Mill Ride -->
+    <trkseg>
+      <name>Lift Ride: Tye Mill</name>
+      <trkpt lat="47.73805" lon="-121.09105">
+        <ele>1401.0</ele>
+        <time>2025-10-26T19:39:10Z</time>
+      </trkpt>
+      <trkpt lat="47.73720" lon="-121.09500">
+        <ele>1450.0</ele>
+        <time>2025-10-26T19:41:30Z</time>
+      </trkpt>
+      <trkpt lat="47.73650" lon="-121.09900">
+        <ele>1490.0</ele>
+        <time>2025-10-26T19:44:00Z</time>
+        <desc>Unloading Tye Mill (Backside Access).</desc>
+      </trkpt>
+    </trkseg>
+    
+    <!-- Segment 18: To the Backside - Ski to Jupiter Base -->
+    <trkseg>
+      <name>Ski Run: Skid Road (to Jupiter Base)</name>
+      <trkpt lat="47.73650" lon="-121.09900">
+        <ele>1490.0</ele>
+        <time>2025-10-26T19:44:30Z</time>
+        <desc>Starting down Skid Road to Mill Valley.</desc>
+      </trkpt>
+      <trkpt lat="47.73580" lon="-121.09750">
+        <ele>1450.0</ele>
+        <time>2025-10-26T19:45:00Z</time>
+      </trkpt>
+      <trkpt lat="47.73510" lon="-121.09600">
+        <ele>1410.0</ele>
+        <time>2025-10-26T19:45:30Z</time>
+      </trkpt>
+      <trkpt lat="47.73440" lon="-121.09450">
+        <ele>1370.0</ele>
+        <time>2025-10-26T19:46:00Z</time>
+      </trkpt>
+      <trkpt lat="47.73370" lon="-121.09300">
+        <ele>1330.0</ele>
+        <time>2025-10-26T19:46:30Z</time>
+      </trkpt>
+      <trkpt lat="47.73300" lon="-121.09250">
+        <ele>1290.0</ele>
+        <time>2025-10-26T19:47:00Z</time>
+      </trkpt>
+      <trkpt lat="47.73250" lon="-121.09200">
+        <ele>1250.0</ele>
+        <time>2025-10-26T19:47:30Z</time>
+      </trkpt>
+      <trkpt lat="47.73200" lon="-121.09150">
+        <ele>1210.0</ele>
+        <time>2025-10-26T19:48:00Z</time>
+      </trkpt>
+      <trkpt lat="47.73300" lon="-121.09200">
+        <ele>1165.0</ele>
+        <time>2025-10-26T19:49:00Z</time>
+        <desc>Arrived at Jupiter Express Base (Mill Valley).</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 19: Backside - Jupiter L1 Line -->
+    <trkseg>
+      <name>Lift Line: Jupiter Express</name>
+      <trkpt lat="47.73300" lon="-121.09200">
+        <ele>1165.0</ele>
+        <time>2025-10-26T19:50:00Z</time>
+        <desc>Getting in line for Jupiter Express.</desc>
+      </trkpt>
+      <trkpt lat="47.73305" lon="-121.09205">
+        <ele>1166.0</ele>
+        <time>2025-10-26T19:57:00Z</time>
+        <desc>Loading Jupiter Express.</desc>
+      </trkpt>
+    </trkseg>
+    
+    <!-- Segment 20: Backside - Jupiter L1 Ride -->
+    <trkseg>
+      <name>Lift Ride: Jupiter Express</name>
+      <trkpt lat="47.73305" lon="-121.09205">
+        <ele>1166.0</ele>
+        <time>2025-10-26T19:57:10Z</time>
+      </trkpt>
+      <trkpt lat="47.73450" lon="-121.09500">
+        <ele>1300.0</ele>
+        <time>2025-10-26T20:00:30Z</time>
+      </trkpt>
+      <trkpt lat="47.73640" lon="-121.09850">
+        <ele>1485.0</ele>
+        <time>2025-10-26T20:04:00Z</time>
+        <desc>Unloading Jupiter Express.</desc>
+      </trkpt>
+    </trkseg>
+    
+    <!-- Segment 21: Backside - Ski Run: Gemini (Detailed) -->
+    <trkseg>
+      <name>Ski Run: Gemini (Detailed)</name>
+      <trkpt lat="47.73640" lon="-121.09850">
+        <ele>1485.0</ele>
+        <time>2025-10-26T20:04:30Z</time>
+        <desc>Starting down Gemini.</desc>
+      </trkpt>
+      <trkpt lat="47.73590" lon="-121.09700">
+        <ele>1445.0</ele>
+        <time>2025-10-26T20:05:00Z</time>
+      </trkpt>
+      <trkpt lat="47.73540" lon="-121.09550">
+        <ele>1405.0</ele>
+        <time>2025-10-26T20:05:30Z</time>
+      </trkpt>
+      <trkpt lat="47.73490" lon="-121.09400">
+        <ele>1365.0</ele>
+        <time>2025-10-26T20:06:00Z</time>
+      </trkpt>
+      <trkpt lat="47.73440" lon="-121.09300">
+        <ele>1325.0</ele>
+        <time>2025-10-26T20:06:30Z</time>
+      </trkpt>
+      <trkpt lat="47.73390" lon="-121.09250">
+        <ele>1285.0</ele>
+        <time>2025-10-26T20:07:00Z</time>
+      </trkpt>
+      <trkpt lat="47.73340" lon="-121.09200">
+        <ele>1245.0</ele>
+        <time>2025-10-26T20:07:30Z</time>
+      </trkpt>
+      <trkpt lat="47.73290" lon="-121.09150">
+        <ele>1205.0</ele>
+        <time>2025-10-26T20:08:00Z</time>
+      </trkpt>
+      <trkpt lat="47.73300" lon="-121.09200">
+        <ele>1165.0</ele>
+        <time>2025-10-26T20:09:30Z</time>
+        <desc>Back at Jupiter Base.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 22: Backside - Jupiter L2 Line -->
+    <trkseg>
+      <name>Lift Line: Jupiter Express (Lap 2)</name>
+      <trkpt lat="47.73300" lon="-121.09200">
+        <ele>1165.0</ele>
+        <time>2025-10-26T20:10:30Z</time>
+        <desc>Getting back in line for Jupiter.</desc>
+      </trkpt>
+      <trkpt lat="47.73305" lon="-121.09205">
+        <ele>1166.0</ele>
+        <time>2025-10-26T20:17:30Z</time>
+        <desc>Loading Jupiter Express.</desc>
+      </trkpt>
+    </trkseg>
+    
+    <!-- Segment 23: Backside - Jupiter L2 Ride -->
+    <trkseg>
+      <name>Lift Ride: Jupiter Express (Lap 2)</name>
+      <trkpt lat="47.73305" lon="-121.09205">
+        <ele>1166.0</ele>
+        <time>2025-10-26T20:17:40Z</time>
+      </trkpt>
+      <trkpt lat="47.73450" lon="-121.09500">
+        <ele>1300.0</ele>
+        <time>2025-10-26T20:21:00Z</time>
+      </trkpt>
+      <trkpt lat="47.73640" lon="-121.09850">
+        <ele>1485.0</ele>
+        <time>2025-10-26T20:24:30Z</time>
+        <desc>Unloading Jupiter Express.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 24: Backside - Ski Run: Aquarius (Detailed) -->
+    <trkseg>
+      <name>Ski Run: Aquarius (Detailed)</name>
+      <trkpt lat="47.73640" lon="-121.09850">
+        <ele>1485.0</ele>
+        <time>2025-10-26T20:25:00Z</time>
+        <desc>Starting down Aquarius.</desc>
+      </trkpt>
+      <trkpt lat="47.73580" lon="-121.09720">
+        <ele>1440.0</ele>
+        <time>2025-10-26T20:25:30Z</time>
+      </trkpt>
+      <trkpt lat="47.73520" lon="-121.09590">
+        <ele>1395.0</ele>
+        <time>2025-10-26T20:26:00Z</time>
+      </trkpt>
+      <trkpt lat="47.73460" lon="-121.09460">
+        <ele>1350.0</ele>
+        <time>2025-10-26T20:26:30Z</time>
+      </trkpt>
+      <trkpt lat="47.73400" lon="-121.09330">
+        <ele>1305.0</ele>
+        <time>2025-10-26T20:27:00Z</time>
+      </trkpt>
+      <trkpt lat="47.73350" lon="-121.09230">
+        <ele>1260.0</ele>
+        <time>2025-10-26T20:27:30Z</time>
+      </trkpt>
+      <trkpt lat="47.73300" lon="-121.09180">
+        <ele>1215.0</ele>
+        <time>2025-10-26T20:28:00Z</time>
+      </trkpt>
+      <trkpt lat="47.73300" lon="-121.09200">
+        <ele>1165.0</ele>
+        <time>2025-10-26T20:30:00Z</time>
+        <desc>Back at Jupiter Base.</desc>
+      </trkpt>
+    </trkseg>
+    
+    <!-- Segment 25: Backside - Jupiter L3 Line (To Get Home) -->
+    <trkseg>
+      <name>Lift Line: Jupiter Express (To Get Home)</name>
+      <trkpt lat="47.73300" lon="-121.09200">
+        <ele>1165.0</ele>
+        <time>2025-10-26T20:31:00Z</time>
+        <desc>Last time up Jupiter to get back to front side.</desc>
+      </trkpt>
+      <trkpt lat="47.73305" lon="-121.09205">
+        <ele>1166.0</ele>
+        <time>2025-10-26T20:38:00Z</time>
+        <desc>Loading Jupiter Express.</desc>
+      </trkpt>
+    </trkseg>
+    
+    <!-- Segment 26: Backside - Jupiter L3 Ride (To Get Home) -->
+    <trkseg>
+      <name>Lift Ride: Jupiter Express (To Get Home)</name>
+      <trkpt lat="47.73305" lon="-121.09205">
+        <ele>1166.0</ele>
+        <time>2025-10-26T20:38:10Z</time>
+      </trkpt>
+      <trkpt lat="47.73450" lon="-121.09500">
+        <ele>1300.0</ele>
+        <time>2025-10-26T20:41:30Z</time>
+      </trkpt>
+      <trkpt lat="47.73640" lon="-121.09850">
+        <ele>1485.0</ele>
+        <time>2025-10-26T20:45:00Z</time>
+        <desc>Unloading Jupiter Express. Heading to front side.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 27: Ski Run Back to Main Base (Detailed) -->
+    <trkseg>
+      <name>Ski Run: Skid Road to Hog Heaven (to Main Base)</name>
+      <trkpt lat="47.73640" lon="-121.09850">
+        <ele>1485.0</ele>
+        <time>2025-10-26T20:45:30Z</time>
+        <desc>Starting down Skid Road to get to front side.</desc>
+      </trkpt>
+      <trkpt lat="47.73750" lon="-121.09650">
+        <ele>1450.0</ele>
+        <time>2025-10-26T20:46:30Z</time>
+      </trkpt>
+      <trkpt lat="47.73850" lon="-121.09450">
+        <ele>1415.0</ele>
+        <time>2025-10-26T20:47:30Z</time>
+        <desc>Now on Hog Heaven.</desc>
+      </trkpt>
+      <trkpt lat="47.74000" lon="-121.09300">
+        <ele>1370.0</ele>
+        <time>2025-10-26T20:48:30Z</time>
+      </trkpt>
+      <trkpt lat="47.74150" lon="-121.09150">
+        <ele>1325.0</ele>
+        <time>2025-10-26T20:49:30Z</time>
+      </trkpt>
+      <trkpt lat="47.74300" lon="-121.09000">
+        <ele>1280.0</ele>
+        <time>2025-10-26T20:50:30Z</time>
+      </trkpt>
+      <trkpt lat="47.74480" lon="-121.08900">
+        <ele>1240.0</ele>
+        <time>2025-10-26T20:52:00Z</time>
+        <desc>Back to main base area.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- === NEW BACKSIDE SECTION END === -->
+    
+    <!-- Segment 28: Afternoon - Last Run (Sparse Lift, Detailed Run) -->
+    <trkseg>
+      <name>Lift Line: Brooks Express</name>
+      <trkpt lat="47.74600" lon="-121.09100">
+        <ele>1237.0</ele>
+        <time>2025-10-26T20:55:00Z</time>
+        <desc>Trying Brooks lift for last run.</desc>
+      </trkpt>
+      <trkpt lat="47.74605" lon="-121.09105">
+        <ele>1238.0</ele>
+        <time>2025-10-26T20:59:00Z</time>
+        <desc>Loading Brooks.</desc>
+      </trkpt>
+    </trkseg>
+    
+    <!-- Segment 29: Lift Ride: Brooks Express -->
+    <trkseg>
+      <name>Lift Ride: Brooks Express</name>
+      <trkpt lat="47.74605" lon="-121.09105">
+        <ele>1238.0</ele>
+        <time>2025-10-26T20:59:10Z</time>
+      </trkpt>
+      <trkpt lat="47.74300" lon="-121.09450">
+        <ele>1350.0</ele>
+        <time>2025-10-26T21:02:00Z</time>
+      </trkpt>
+      <trkpt lat="47.74000" lon="-121.09800">
+        <ele>1475.0</ele> <!-- 4840 ft -->
+        <time>2025-10-26T21:05:00Z</time>
+        <desc>Unloading Brooks.</desc>
+      </trkpt>
+    </trkseg>
+    
+    <!-- Segment 30: Ski Run: Broadway (Last Run) -->
+    <trkseg>
+      <name>Ski Run: Broadway (Last Run)</name>
+      <trkpt lat="47.74000" lon="-121.09800">
+        <ele>1475.0</ele>
+        <time>2025-10-26T21:05:30Z</time>
+        <desc>Last run down Broadway.</desc>
+      </trkpt>
+      <trkpt lat="47.74100" lon="-121.09650">
+        <ele>1435.0</ele>
+        <time>2025-10-26T21:06:00Z</time>
+      </trkpt>
+      <trkpt lat="47.74200" lon="-121.09500">
+        <ele>1395.0</ele>
+        <time>2025-10-26T21:06:30Z</time>
+      </trkpt>
+      <trkpt lat="47.74300" lon="-121.09350">
+        <ele>1350.0</ele>
+        <time>2025-10-26T21:07:00Z</time>
+      </trkpt>
+      <trkpt lat="47.74400" lon="-121.09200">
+        <ele>1300.0</ele>
+        <time>2025-10-26T21:07:30Z</time>
+      </trkpt>
+      <trkpt lat="47.74500" lon="-121.09150">
+        <ele>1265.0</ele>
+        <time>2025-10-26T21:08:00Z</time>
+      </trkpt>
+      <trkpt lat="47.74590" lon="-121.09080">
+        <ele>1237.0</ele>
+        <time>2025-10-26T21:08:30Z</time>
+        <desc>Back at the base.</desc>
+      </trkpt>
+    </trkseg>
+    
+    <!-- Segment 31: Walk back to car (Sparse) -->
+    <trkseg>
+      <name>Walk to Car</name>
+      <trkpt lat="47.74552" lon="-121.08950">
+        <ele>1238.0</ele>
+        <time>2025-10-26T21:15:00Z</time>
+        <desc>Day over. Walking back to car.</desc>
+      </trkpt>
+      <trkpt lat="47.74580" lon="-121.09050">
+        <ele>1236.0</ele>
+        <time>2025-10-26T21:18:00Z</time>
+        <desc>At car. End of track.</desc>
+      </trkpt>
+    </trkseg>
+
+  </trk>
+</gpx>
+

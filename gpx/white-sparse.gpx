@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="Gemini"
+  xmlns="http://www.topografix.com/GPX/1/1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  
+  <metadata>
+    <name>A Plausible Ski Day at White Pass, WA</name>
+    <desc>Includes walking from parking, lift lines, skiing runs (Holiday, Poma Face), and a break at High Camp Lodge (including 2nd story). Runs are detailed.</desc>
+    <author>
+      <name>Gemini</name>
+    </author>
+  </metadata>
+
+  <trk>
+    <name>White Pass Ski Day</name>
+    <desc>A full day of skiing, starting from the parking lot, riding Far East and Great White Express, and visiting High Camp Lodge.</desc>
+    
+    <!-- Segment 1: Arriving - Walking from Parking Lot to Base Lodge (Sparse) -->
+    <trkseg>
+      <name>Walk from Parking Lot to Base Lodge</name>
+      <trkpt lat="46.63550" lon="-121.39000">
+        <ele>1370.0</ele> <!-- 4495 ft -->
+        <time>2025-10-26T16:50:00Z</time> <!-- 8:50 AM PDT (UTC-7) -->
+        <desc>Parked car.</desc>
+      </trkpt>
+      <trkpt lat="46.63580" lon="-121.39050">
+        <ele>1371.0</ele>
+        <time>2025-10-26T16:51:30Z</time>
+        <desc>Walking with gear.</desc>
+      </trkpt>
+      <trkpt lat="46.63600" lon="-121.39100">
+        <ele>1372.0</ele> <!-- 4500 ft -->
+        <time>2025-10-26T16:53:00Z</time>
+        <desc>Arrived at White Pass Base Lodge.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 2: Waiting for Far East Lift (Sparse) -->
+    <trkseg>
+      <name>Lift Line: Far East Triple</name>
+      <trkpt lat="46.63610" lon="-121.39080">
+        <ele>1373.0</ele>
+        <time>2025-10-26T17:02:00Z</time> <!-- 9:02 AM -->
+        <desc>Getting in line for Far East Triple (warm-up).</desc>
+      </trkpt>
+      <trkpt lat="46.63612" lon="-121.39082">
+        <ele>1373.0</ele>
+        <time>2025-10-26T17:05:00Z</time>
+        <desc>Shuffling in line.</desc>
+      </trkpt>
+      <trkpt lat="46.63615" lon="-121.39085">
+        <ele>1374.0</ele>
+        <time>2025-10-26T17:07:00Z</time>
+        <desc>Loading Far East Triple.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 3: Riding Far East Lift (Sparse) -->
+    <trkseg>
+      <name>Lift Ride: Far East Triple</name>
+      <trkpt lat="46.63615" lon="-121.39085">
+        <ele>1374.0</ele>
+        <time>2025-10-26T17:07:10Z</time>
+        <desc>On Far East lift.</desc>
+      </trkpt>
+      <trkpt lat="46.63700" lon="-121.39500">
+        <ele>1480.0</ele>
+        <time>2025-10-26T17:10:30Z</time>
+      </trkpt>
+      <trkpt lat="46.63750" lon="-121.39800">
+        <ele>1600.0</ele> <!-- 5250 ft -->
+        <time>2025-10-26T17:14:00Z</time>
+        <desc>Unloading Far East Triple.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 4: Skiing Run 1 (Holiday) (Detailed) -->
+    <trkseg>
+      <name>Ski Run: Holiday (Warm-up)</name>
+      <trkpt lat="46.63750" lon="-121.39800">
+        <ele>1600.0</ele>
+        <time>2025-10-26T17:14:30Z</time>
+        <desc>Starting down Holiday.</desc>
+      </trkpt>
+      <trkpt lat="46.63720" lon="-121.39700">
+        <ele>1565.0</ele>
+        <time>2025-10-26T17:15:00Z</time>
+      </trkpt>
+      <trkpt lat="46.63690" lon="-121.39600">
+        <ele>1530.0</ele>
+        <time>2025-10-26T17:15:30Z</time>
+      </trkpt>
+      <trkpt lat="46.63660" lon="-121.39500">
+        <ele>1495.0</ele>
+        <time>2025-10-26T17:16:00Z</time>
+      </trkpt>
+      <trkpt lat="46.63630" lon="-121.39400">
+        <ele>1460.0</ele>
+        <time>2025-10-26T17:16:30Z</time>
+      </trkpt>
+      <trkpt lat="46.63610" lon="-121.39300">
+        <ele>1425.0</ele>
+        <time>2025-10-26T17:17:00Z</time>
+      </trkpt>
+      <trkpt lat="46.63600" lon="-121.39150">
+        <ele>1380.0</ele>
+        <time>2025-10-26T17:17:30Z</time>
+      </trkpt>
+      <trkpt lat="46.63605" lon="-121.39110">
+        <ele>1372.0</ele>
+        <time>2025-10-26T17:18:00Z</time>
+        <desc>Back to Base Lodge area.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 5: Waiting for Great White Express (Sparse) -->
+    <trkseg>
+      <name>Lift Line: Great White Express</name>
+      <trkpt lat="46.63620" lon="-121.39180">
+        <ele>1372.0</ele>
+        <time>2025-10-26T17:20:00Z</time>
+        <desc>Getting in line for Great White Express (to High Camp).</desc>
+      </trkpt>
+      <trkpt lat="46.63622" lon="-121.39182">
+        <ele>1372.0</ele>
+        <time>2025-10-26T17:24:00Z</time>
+        <desc>Shuffling in line.</desc>
+      </trkpt>
+      <trkpt lat="46.63625" lon="-121.39185">
+        <ele>1373.0</ele>
+        <time>2025-10-26T17:27:00Z</time>
+        <desc>Loading Great White Express.</desc>
+      </trkpt>
+    </trkseg>
+    
+    <!-- Segment 6: Riding Great White Express (Sparse) -->
+    <trkseg>
+      <name>Lift Ride: Great White Express</name>
+      <trkpt lat="46.63625" lon="-121.39185">
+        <ele>1373.0</ele>
+        <time>2025-10-26T17:27:10Z</time>
+      </trkpt>
+      <trkpt lat="46.63700" lon="-121.39800">
+        <ele>1550.0</ele>
+        <time>2025-10-26T17:30:00Z</time>
+      </trkpt>
+      <trkpt lat="46.63780" lon="-121.40300">
+        <ele>1750.0</ele>
+        <time>2025-10-26T17:33:00Z</time>
+      </trkpt>
+      <trkpt lat="46.63800" lon="-121.40500">
+        <ele>1828.0</ele> <!-- 6000 ft -->
+        <time>2025-10-26T17:35:00Z</time>
+        <desc>Unloading at High Camp.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 7: Pause for view at top -->
+    <trkseg>
+      <name>Pause at High Camp</name>
+      <trkpt lat="46.63800" lon="-121.40500">
+        <ele>1828.0</ele>
+        <time>2025-10-26T17:35:30Z</time>
+        <desc>Pausing for view of Mt. Rainier.</desc>
+      </trkpt>
+      <trkpt lat="46.63801" lon="-121.40501">
+        <ele>1828.0</ele>
+        <time>2025-10-26T17:38:00Z</time>
+        <desc>Taking photos.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 8: Visit to High Camp Lodge (with 2nd Story) -->
+    <trkseg>
+      <name>Visit High Camp Lodge (and 2nd story)</name>
+      <trkpt lat="46.63805" lon="-121.40510">
+        <ele>1828.0</ele>
+        <time>2025-10-26T17:38:30Z</time>
+        <desc>Walking over to High Camp Lodge.</desc>
+      </trkpt>
+      <trkpt lat="46.63810" lon="-121.40520">
+        <ele>1828.0</ele>
+        <time>2025-10-26T17:39:00Z</time>
+        <desc>Inside High Camp Lodge (1st floor).</desc>
+      </trkpt>
+      <!-- Simulating walking up stairs -->
+      <trkpt lat="46.63811" lon="-121.40521">
+        <ele>1831.0</ele> <!-- 6010 ft -->
+        <time>2025-10-26T17:39:30Z</time>
+        <desc>Walked up to 2nd story.</desc>
+      </trkpt>
+      <!-- Break on 2nd story -->
+      <trkpt lat="46.63812" lon="-121.40522">
+        <ele>1831.0</ele>
+        <time>2025-10-26T17:40:00Z</time>
+        <desc>Sitting on 2nd story, having a snack.</desc>
+      </trkpt>
+      <trkpt lat="46.63813" lon="-121.40523">
+        <ele>1831.0</ele>
+        <time>2025-10-26T17:55:00Z</time>
+        <desc>Still on 2nd story.</desc>
+      </trkpt>
+      <!-- Simulating walking back down -->
+      <trkpt lat="46.63810" lon="-121.40520">
+        <ele>1828.0</ele>
+        <time>2025-10-26T17:55:30Z</time>
+        <desc>Walking back downstairs.</desc>
+      </trkpt>
+      <trkpt lat="46.63805" lon="-121.40510">
+        <ele>1828.0</ele>
+        <time>2025-10-26T17:56:00Z</time>
+        <desc>Leaving lodge, getting skis on.</desc>
+      </trkpt>
+    </trkseg>
+    
+    <!-- Segment 9: Skiing Run 2 (Cascade > Poma Face) (Detailed) -->
+    <trkseg>
+      <name>Ski Run: Cascade to Poma Face</name>
+      <trkpt lat="46.63800" lon="-121.40500">
+        <ele>1828.0</ele>
+        <time>2025-10-26T17:57:00Z</time>
+        <desc>Starting down Cascade.</desc>
+      </trkpt>
+      <trkpt lat="46.63780" lon="-121.40350">
+        <ele>1780.0</ele>
+        <time>2025-10-26T17:57:30Z</time>
+      </trkpt>
+      <trkpt lat="46.63760" lon="-121.40200">
+        <ele>1732.0</ele>
+        <time>2025-10-26T17:58:00Z</time>
+      </trkpt>
+      <trkpt lat="46.63740" lon="-121.40050">
+        <ele>1684.0</ele>
+        <time>2025-10-26T17:58:30Z</time>
+        <desc>Merging onto Poma Face.</desc>
+      </trkpt>
+      <trkpt lat="46.63720" lon="-121.39900">
+        <ele>1636.0</ele>
+        <time>2025-10-26T17:59:00Z</time>
+      </trkpt>
+      <trkpt lat="46.63700" lon="-121.39750">
+        <ele>1588.0</ele>
+        <time>2025-10-26T17:59:30Z</time>
+      </trkpt>
+      <trkpt lat="46.63680" lon="-121.39600">
+        <ele>1540.0</ele>
+        <time>2025-10-26T18:00:00Z</time>
+      </trkpt>
+      <trkpt lat="46.63660" lon="-121.39450">
+        <ele>1492.0</ele>
+        <time>2025-10-26T18:00:30Z</time>
+      </trkpt>
+      <trkpt lat="46.63640" lon="-121.39300">
+        <ele>1444.0</ele>
+        <time>2025-10-26T18:01:00Z</time>
+      </trkpt>
+      <trkpt lat="46.63620" lon="-121.39150">
+        <ele>1396.0</ele>
+        <time>2025-10-26T18:01:30Z</time>
+      </trkpt>
+      <trkpt lat="46.63610" lon="-121.39110">
+        <ele>1372.0</ele>
+        <time>2025-10-26T18:02:00Z</time>
+        <desc>Back to Base Lodge area.</desc>
+      </trkpt>
+    </trkseg>
+    
+    <!-- Segment 10: Lunch Break at Base Lodge (Sparse) -->
+    <trkseg>
+      <name>Lunch at Base Lodge</name>
+      <trkpt lat="46.63600" lon="-121.39100">
+        <ele>1372.0</ele>
+        <time>2025-10-26T18:03:00Z</time>
+        <desc>Walking into Base Lodge for lunch.</desc>
+      </trkpt>
+      <trkpt lat="46.63601" lon="-121.39101">
+        <ele>1372.0</ele>
+        <time>2025-10-26T18:05:00Z</time>
+        <desc>Getting food.</desc>
+      </trkpt>
+      <!-- This is the lunch break. -->
+      <trkpt lat="46.63602" lon="-121.39102">
+        <ele>1372.0</ele>
+        <time>2025-10-26T18:30:00Z</time>
+        <desc>Eating lunch.</desc>
+      </trkpt>
+      <trkpt lat="46.63600" lon="-121.39100">
+        <ele>1372.0</ele>
+        <time>2025-10-26T18:50:00Z</time>
+        <desc>Finished lunch, suiting back up.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 11: Afternoon Lap - Great White Express (Sparse) -->
+    <trkseg>
+      <name>Lift Line: Great White Express (Lap 2)</name>
+      <trkpt lat="46.63620" lon="-121.39180">
+        <ele>1372.0</ele>
+        <time>2025-10-26T18:52:00Z</time>
+        <desc>Getting in line for Great White Express.</desc>
+      </trkpt>
+      <trkpt lat="46.63625" lon="-121.39185">
+        <ele>1373.0</ele>
+        <time>2025-10-26T19:00:00Z</time>
+        <desc>Loading Great White Express.</desc>
+      </trkpt>
+    </trkseg>
+    <trkseg>
+      <name>Lift Ride: Great White Express (Lap 2)</name>
+      <trkpt lat="46.63800" lon="-121.40500">
+        <ele>1828.0</ele>
+        <time>2025-10-26T19:08:00Z</time>
+        <desc>Unloading at High Camp again.</desc>
+      </trkpt>
+    </trkseg>
+    
+    <!-- Segment 12: Skiing Run 3 (Poma Face - Last Run) (Detailed) -->
+    <trkseg>
+      <name>Ski Run: Poma Face (Last Run)</name>
+      <trkpt lat="46.63800" lon="-121.40500">
+        <ele>1828.0</ele>
+        <time>2025-10-26T19:08:30Z</time>
+        <desc>Starting last run down Poma Face.</desc>
+      </trkpt>
+      <trkpt lat="46.63760" lon="-121.40200">
+        <ele>1732.0</ele>
+        <time>2025-10-26T19:09:00Z</time>
+      </trkpt>
+      <trkpt lat="46.63720" lon="-121.39900">
+        <ele>1636.0</ele>
+        <time>2025-10-26T19:09:30Z</time>
+      </trkpt>
+      <trkpt lat="46.63680" lon="-121.39600">
+        <ele>1540.0</ele>
+        <time>2025-10-26T19:10:00Z</time>
+      </trkpt>
+      <trkpt lat="46.63640" lon="-121.39300">
+        <ele>1444.0</ele>
+        <time>2025-10-26T19:10:30Z</time>
+      </trkpt>
+      <trkpt lat="46.63610" lon="-121.39110">
+        <ele>1372.0</ele>
+        <time>2025-10-26T19:11:00Z</time>
+        <desc>Back to Base Lodge area. Calling it a day.</desc>
+      </trkpt>
+    </trkseg>
+
+    <!-- Segment 13: Walk back to car (Sparse) -->
+    <trkseg>
+      <name>Walk to Car</name>
+      <trkpt lat="46.63600" lon="-121.39100">
+        <ele>1372.0</ele>
+        <time>2025-10-26T19:15:00Z</time>
+        <desc>Day over. Walking back to car.</desc>
+      </trkpt>
+      <trkpt lat="46.63580" lon="-121.39050">
+        <ele>1371.0</ele>
+        <time>2025-10-26T19:17:00Z</time>
+      </trkpt>
+      <trkpt lat="46.63550" lon="-121.39000">
+        <ele>1370.0</ele>
+        <time>2025-10-26T19:19:00Z</time>
+        <desc>At car. End of track.</desc>
+      </trkpt>
+    </trkseg>
+
+  </trk>
+</gpx>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Privacy Tracking -->
+	<key>NSPrivacyTracking</key>
+	<false/>
+
+	<!-- Privacy Tracking Domains (none - no third-party tracking) -->
+	<key>NSPrivacyTrackingDomains</key>
+	<array/>
+
+	<!-- Data Collection -->
+	<key>NSPrivacyCollectedDataTypes</key>
+	<array>
+		<dict>
+			<!-- Location Data -->
+			<key>NSPrivacyCollectedDataType</key>
+			<string>NSPrivacyCollectedDataTypePreciseLocation</string>
+
+			<key>NSPrivacyCollectedDataTypeLinked</key>
+			<false/>
+
+			<key>NSPrivacyCollectedDataTypeTracking</key>
+			<false/>
+
+			<key>NSPrivacyCollectedDataTypePurposes</key>
+			<array>
+				<string>NSPrivacyCollectedDataTypePurposeAppFunctionality</string>
+			</array>
+		</dict>
+	</array>
+
+	<!-- API Types Accessed -->
+	<key>NSPrivacyAccessedAPITypes</key>
+	<array>
+		<dict>
+			<!-- User Defaults API -->
+			<key>NSPrivacyAccessedAPIType</key>
+			<string>NSPrivacyAccessedAPICategoryUserDefaults</string>
+
+			<key>NSPrivacyAccessedAPITypeReasons</key>
+			<array>
+				<!-- CA92.1: Access info from same app -->
+				<string>CA92.1</string>
+			</array>
+		</dict>
+
+		<dict>
+			<!-- File Timestamp API -->
+			<key>NSPrivacyAccessedAPIType</key>
+			<string>NSPrivacyAccessedAPICategoryFileTimestamp</string>
+
+			<key>NSPrivacyAccessedAPITypeReasons</key>
+			<array>
+				<!-- C617.1: Access timestamps for files in app container -->
+				<string>C617.1</string>
+			</array>
+		</dict>
+
+		<dict>
+			<!-- System Boot Time API -->
+			<key>NSPrivacyAccessedAPIType</key>
+			<string>NSPrivacyAccessedAPICategorySystemBootTime</string>
+
+			<key>NSPrivacyAccessedAPITypeReasons</key>
+			<array>
+				<!-- 35F9.1: Measure time for app functionality -->
+				<string>35F9.1</string>
+			</array>
+		</dict>
+
+		<dict>
+			<!-- Disk Space API -->
+			<key>NSPrivacyAccessedAPIType</key>
+			<string>NSPrivacyAccessedAPICategoryDiskSpace</string>
+
+			<key>NSPrivacyAccessedAPITypeReasons</key>
+			<array>
+				<!-- E174.1: Display disk space to user or provide user control -->
+				<string>E174.1</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

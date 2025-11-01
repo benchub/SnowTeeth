@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Units Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Units"
+                    android:textSize="13sp"
+                    android:textColor="@color/gray"
+                    android:layout_marginBottom="12dp"/>
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/toggleGroupUnits"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true"
+                    app:selectionRequired="true">
+
+                    <Button
+                        android:id="@+id/btnEmpire"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Empire!"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"/>
+
+                    <Button
+                        android:id="@+id/btnScience"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Science!"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"/>
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Visualization Style Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visualization Style"
+                    android:textSize="13sp"
+                    android:textColor="@color/gray"
+                    android:layout_marginBottom="12dp"/>
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/toggleGroupVisStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true"
+                    app:selectionRequired="true">
+
+                    <Button
+                        android:id="@+id/btnFlame"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/flame"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"/>
+
+                    <Button
+                        android:id="@+id/btnData"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/data"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"/>
+
+                    <Button
+                        android:id="@+id/btnYeti"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/yeti"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"/>
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Downhill Thresholds Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvDownhillHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Downhill Thresholds (mph)"
+                    android:textSize="13sp"
+                    android:textColor="@color/gray"
+                    android:layout_marginBottom="8dp"/>
+
+                <com.snowteeth.app.view.ThresholdSliderView
+                    android:id="@+id/sliderDownhill"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Uphill Thresholds Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tvUphillHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Uphill Thresholds (mph)"
+                    android:textSize="13sp"
+                    android:textColor="@color/gray"
+                    android:layout_marginBottom="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="I don't always go uphill, but when I do, I use Chairlifts"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/black"/>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchAlternateAscent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"/>
+                </LinearLayout>
+
+                <com.snowteeth.app.view.ThresholdSliderView
+                    android:id="@+id/sliderUphill"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Reset Button -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="12dp">
+
+            <Button
+                android:id="@+id/btnReset"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reset to Defaults"
+                android:textColor="@color/red"
+                android:textAllCaps="false"
+                android:padding="16dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

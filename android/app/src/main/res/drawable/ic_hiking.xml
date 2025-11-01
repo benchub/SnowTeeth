@@ -1,0 +1,37 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Head -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M28,8m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+    <!-- Body/torso -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M28,12L26,24L30,24Z"/>
+    <!-- Backpack -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M29,14L33,16L33,22L29,24Z"/>
+    <!-- Front leg stepping up -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M26,24L24,32L22,36L24,37L27,30Z"/>
+    <!-- Back leg -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M30,24L32,35L30,38L28,37L29,30Z"/>
+    <!-- Hiking pole -->
+    <path
+        android:fillColor="#FF000000"
+        android:strokeWidth="2"
+        android:strokeColor="#FF000000"
+        android:pathData="M24,18L18,38"/>
+    <!-- Mountain/slope line -->
+    <path
+        android:strokeWidth="2"
+        android:strokeColor="#FF000000"
+        android:pathData="M8,42L24,32L40,42"/>
+</vector>

@@ -1,0 +1,23 @@
+[Desktop Entry]
+# Copyright 2024 Willem Vermin
+Name=xsnow
+# xsnow-XSNOW_VERSION
+Comment=Snow, Santa and birds on your desktop
+Exec=xsnow
+Icon=xsnow
+Type=Application
+Categories=Game;Simulation
+Terminal=false
+Name[en_US]=xsnow
+Keywords=christmas;santa;snow;xmas
+Version=1.0
+StartupNotify=true
+Actions=start;nomenu;
+
+[Desktop Action start]
+Name=Start xsnow
+Exec=xsnow
+
+[Desktop Action nomenu]
+Name=Start without menu
+Exec=xsnow -hidemenu

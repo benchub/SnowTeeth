@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/noDataContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivNoDataIcon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@android:drawable/ic_dialog_alert"
+            android:tint="#FF9500"
+            android:contentDescription="Warning icon"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvNoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No tracking data available"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/statsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvTrackingStartTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="14sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="12dp"
+                android:visibility="gone"/>
+
+            <!-- 3-column grid layout for landscape -->
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:columnCount="3"
+                app:rowCount="2"
+                app:orientation="horizontal"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp">
+
+                <!-- Row 1 -->
+                <include
+                    android:id="@+id/cardVerticalUp"
+                    layout="@layout/item_stat_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="0"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <include
+                    android:id="@+id/cardVerticalDown"
+                    layout="@layout/item_stat_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="0"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <include
+                    android:id="@+id/cardHorizontalDistance"
+                    layout="@layout/item_stat_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="0"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Row 2 -->
+                <include
+                    android:id="@+id/cardDownhills"
+                    layout="@layout/item_stat_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="0"
+                    android:layout_marginEnd="4dp"/>
+
+                <include
+                    android:id="@+id/cardUphills"
+                    layout="@layout/item_stat_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="0"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"/>
+
+                <include
+                    android:id="@+id/cardLoops"
+                    layout="@layout/item_stat_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="0"
+                    android:layout_marginStart="4dp"/>
+
+            </androidx.gridlayout.widget.GridLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

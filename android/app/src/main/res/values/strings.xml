@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SnowTeeth</string>
+    <string name="configuration">Configuration</string>
+    <string name="visualization">Visualization</string>
+    <string name="stats">Stats</string>
+    <string name="toggle_tracking">Toggle Tracking</string>
+    <string name="tracking_on">Tracking: ON</string>
+    <string name="tracking_off">Tracking: OFF</string>
+    <string name="downhill_hard">Downhill Hard</string>
+    <string name="downhill_medium">Downhill Medium</string>
+    <string name="downhill_easy">Downhill Easy</string>
+    <string name="uphill_hard">Uphill Hard</string>
+    <string name="uphill_medium">Uphill Medium</string>
+    <string name="uphill_easy">Uphill Easy</string>
+    <string name="idle">Idle</string>
+    <string name="metric">Metric</string>
+    <string name="imperial">Imperial</string>
+    <string name="visualization_style">Visualization Style</string>
+    <string name="flame">Flame</string>
+    <string name="data">Data</string>
+    <string name="yeti">Yeti</string>
+    <string name="save">Save</string>
+    <string name="tap_to_exit">Tap to exit</string>
+</resources>

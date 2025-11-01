@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>SnowTeeth needs your location to track how fast you are moving</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>SnowTeeth needs your location to track how fast you are moving, even in the background</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>SnowTeeth needs your location to track how fast you are moving, even in the background</string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
+</dict>
+</plist>

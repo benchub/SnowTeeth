@@ -1,0 +1,40 @@
+{
+  "description": "Default velocity thresholds for SnowTeeth app (in mph)",
+  "version": "1.0.0",
+  "thresholds": {
+    "downhill": {
+      "easy": 2.0,
+      "medium": 6.0,
+      "hard": 10.0,
+      "description": "Downhill velocity thresholds - higher speeds for descents"
+    },
+    "uphill": {
+      "easy": 1.0,
+      "medium": 3.0,
+      "hard": 5.0,
+      "description": "Uphill velocity thresholds - lower speeds for climbs"
+    }
+  },
+  "sliderRanges": {
+    "downhill": {
+      "min": 1.0,
+      "max": 30.0,
+      "step": 0.5
+    },
+    "uphill": {
+      "min": 0.5,
+      "max": 15.0,
+      "step": 0.5
+    }
+  },
+  "constraints": {
+    "minimumGap": 0.5,
+    "description": "Minimum gap between threshold values to prevent overlap"
+  },
+  "conversions": {
+    "mphToMps": 0.44704,
+    "kphToMps": 0.27778,
+    "mphToKph": 1.60934,
+    "kphToMph": 0.621371
+  }
+}

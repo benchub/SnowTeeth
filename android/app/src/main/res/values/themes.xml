@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SnowTeeth" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue_dark</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorSecondaryVariant">@color/blue_dark</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+    </style>
+
+    <style name="Theme.SnowTeeth.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.SnowTeeth.Fullscreen" parent="Theme.SnowTeeth.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- Home button style matching iOS -->
+    <style name="HomeButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_height">60dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="backgroundTint">@color/blue</item>
+        <item name="cornerRadius">15dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="HomeButton.Green">
+        <item name="backgroundTint">@color/green</item>
+    </style>
+
+    <style name="HomeButton.Red">
+        <item name="backgroundTint">@color/red</item>
+    </style>
+
+    <style name="HomeButton.Orange">
+        <item name="backgroundTint">@color/orange</item>
+    </style>
+
+    <style name="HomeButton.Purple">
+        <item name="backgroundTint">@color/purple</item>
+    </style>
+</resources>

@@ -1,0 +1,90 @@
+#!/bin/sh
+# -copyright-
+# xsnow: let it snow on your desktop
+# Copyright (C) 1984,1988,1990,1993-1995,2000-2001 Rick Jansen
+#              2019,2020,2021,2022,2023,2024 Willem Vermin
+# 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# 
+#-endcopyright-
+debroot=../xsnow-debian
+deb=$debroot/debian
+version=`getversion`
+
+curdir=`pwd`
+if [ -f Makefile ] ; then
+   make distclean
+fi
+rm -f configure
+# Create make.inc for the Pixmaps folder
+
+(
+
+cd src/Pixmaps
+echo "EXTRA_DIST = \\" > make.inc
+echo "make.inc \\" >> make.inc
+ls *.xpm *.xbm *.svg | sed 's/$/ \\/' | sed '$s/\\//' >> make.inc
+
+)
+
+./addcopyright.sh Makefile.am afterburner/Makefile.am addcopyright.sh bootstrap \
+   configure.ac simplemake.sh data/Makefile.am
+find src \( -name '*.c' -o -name '*.h' -o -name '*.am' -o -name '*.xpm' -o -name '*.xbm' \
+   -o -name '*.xml' -o -name '*.sh' -o -name '*.cpp' -o -name '*.inc' \) -print0 | xargs -0 ./addcopyright.sh
+
+cd $curdir
+
+date +%s > bootdate
+
+autoreconf -fvi || exit 1
+
+(
+
+echo "removing po/*.gmo and po/*.po"
+rm -f po/*.gmo po/*.po
+
+(
+
+echo "Copying pofiles/*.po to po/"
+cd pofiles || exit 1
+for p in *.po ; do
+   sed '1,/^"Project-Id-Version:/s/someversion/'"$version"'/' $p > ../po/$p
+done
+
+)
+
+cd po
+pofiles=`echo *.po`
+languages=`echo $pofiles | sed 's/\.po//g'`
+echo '# Set of available languages.' > LINGUAS
+echo "$languages" >> LINGUAS
+echo "Created po/LINGUAS:"
+cat LINGUAS
+echo 
+
+)
+
+# create autopkg suite in debian directory, if present
+if [ -d $deb ] ; then
+   rm -rf $deb/tests
+   mkdir -p $deb/tests                                                 || exit 1
+   cp src/test1.sh src/test2.sh $deb/tests                             || exit 1
+   echo "Tests:" > $deb/tests/control                                  || exit 1
+   for f in $deb/tests/test?.sh ; do
+      echo "     `basename $f`" >> $deb/tests/control                  || exit 1
+   done
+   echo "Depends: @, xvfb, xauth, xdotool, scrot" >> $deb/tests/control
+fi
+
+echo "$0 done"

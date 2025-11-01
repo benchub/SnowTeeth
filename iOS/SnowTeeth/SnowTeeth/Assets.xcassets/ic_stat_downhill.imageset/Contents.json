@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "ic_stat_downhill.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}

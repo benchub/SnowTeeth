@@ -1,0 +1,154 @@
+{
+  "description": "Weighted selection probabilities for Yeti visualization video variants",
+  "version": "1.0.0",
+  "notes": [
+    "Weights are relative - they don't need to sum to 1.0 or 100",
+    "Higher weight = more likely to be selected",
+    "For example, weight 3.0 is 3x more likely than weight 1.0",
+    "Single-transition videos (e.g., '0 to 1') automatically have weight 1.0"
+  ],
+  "sameStateVariants": {
+    "0_to_0": {
+      "description": "Idle state loops",
+      "variants": {
+        "0_to_0_a": {
+          "weight": 2.0,
+          "description": "Gentle idle animation"
+        },
+        "0_to_0_b": {
+          "weight": 1.0,
+          "description": "Most common idle loop"
+        },
+        "0_to_0_c": {
+          "weight": 1.5,
+          "description": "Subtle variation"
+        },
+        "0_to_0_d": {
+          "weight": 5.0,
+          "description": "Idle variant d"
+        },
+        "0_to_0_e": {
+          "weight": 3.0,
+          "description": "Idle variant e"
+        },
+        "0_to_0_f": {
+          "weight": 2.0,
+          "description": "Idle variant f"
+        },
+        "0_to_0_g": {
+          "weight": 3.0,
+          "description": "Idle variant g"
+        },
+        "0_to_0_h": {
+          "weight": 2.0,
+          "description": "Idle variant h"
+        },
+        "0_to_0_i": {
+          "weight": 2.0,
+          "description": "Idle variant i"
+        }
+      }
+    },
+    "1_to_1": {
+      "description": "Easy state loops",
+      "variants": {
+        "1_to_1_a": {
+          "weight": 1.0,
+          "description": "Standard easy loop"
+        },
+        "1_to_1_b": {
+          "weight": 1.0,
+          "description": "Alternative easy loop"
+        },
+        "1_to_1_c": {
+          "weight": 1.0,
+          "description": "Easy variant c"
+        },
+        "1_to_1_d": {
+          "weight": 3.0,
+          "description": "Easy variant d"
+        },
+        "1_to_1_e": {
+          "weight": 3.0,
+          "description": "Easy variant e"
+        }
+      }
+    },
+    "2_to_2": {
+      "description": "Medium state loops",
+      "variants": {
+        "2_to_2_a": {
+          "weight": 1.0,
+          "description": "Standard medium loop"
+        },
+        "2_to_2_b": {
+          "weight": 1.0,
+          "description": "Medium variant b"
+        },
+        "2_to_2_c": {
+          "weight": 1.0,
+          "description": "Medium variant c"
+        },
+        "2_to_2_e": {
+          "weight": 5.0,
+          "description": "Medium variant e"
+        },
+        "2_to_2_f": {
+          "weight": 1.0,
+          "description": "Medium variant f"
+        },
+        "2_to_2_g": {
+          "weight": 1.0,
+          "description": "Medium variant g"
+        }
+      }
+    },
+    "3_to_3": {
+      "description": "Hard state loops",
+      "variants": {
+        "3_to_3_a": {
+          "weight": 2.0,
+          "description": "Intense hard loop"
+        },
+        "3_to_3_b": {
+          "weight": 1.0,
+          "description": "Hard variant b"
+        },
+        "3_to_3_c": {
+          "weight": 1.0,
+          "description": "Hard variant c"
+        },
+        "3_to_3_d": {
+          "weight": 2.0,
+          "description": "Hard variant d"
+        }
+      }
+    }
+  },
+  "transitionVideos": {
+    "0_to_1": {
+      "filename": "0_to_1",
+      "description": "Idle to easy transition"
+    },
+    "1_to_0": {
+      "filename": "1_to_0",
+      "description": "Easy to idle transition"
+    },
+    "1_to_2": {
+      "filename": "1_to_2",
+      "description": "Easy to medium transition"
+    },
+    "2_to_1": {
+      "filename": "2_to_1",
+      "description": "Medium to easy transition"
+    },
+    "2_to_3": {
+      "filename": "2_to_3",
+      "description": "Medium to hard transition"
+    },
+    "3_to_2": {
+      "filename": "3_to_2",
+      "description": "Hard to medium transition"
+    }
+  }
+}

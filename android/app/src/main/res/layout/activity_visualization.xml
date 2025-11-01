@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootLayout">
+
+    <com.snowteeth.app.view.VisualizationView
+        android:id="@+id/visualizationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- GPS update time indicator -->
+    <TextView
+        android:id="@+id/gpsUpdateIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:text="GPS: --"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:background="#80000000"
+        android:fontFamily="monospace"/>
+
+</FrameLayout>
