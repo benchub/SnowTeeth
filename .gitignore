@@ -1,0 +1,89 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+
+# Android
+android/.gradle/
+android/.idea/
+android/local.properties
+android/build/
+android/app/build/
+android/captures/
+android/*.iml
+android/.externalNativeBuild
+android/.cxx
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Android Signing (NEVER commit these!)
+android/keystore.properties
+android/*.keystore
+android/*.jks
+*.keystore
+*.jks
+
+# iOS
+iOS/**/xcuserdata/
+iOS/**/DerivedData/
+iOS/**/*.xcworkspace/xcuserdata/
+iOS/**/*.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+iOS/**/build/
+iOS/**/.build/
+iOS/**/*.pbxuser
+iOS/**/*.mode1v3
+iOS/**/*.mode2v3
+iOS/**/*.perspectivev3
+iOS/**/*.hmap
+iOS/**/*.ipa
+iOS/**/*.dSYM.zip
+iOS/**/*.dSYM
+iOS/**/.swiftpm
+iOS/**/Pods/
+iOS/**/Podfile.lock
+iOS/**/*.moved-aside
+
+gpx/build/
+gpx/.build/
+
+
+# Keep workspace container files
+!iOS/**/*.xcworkspace/contents.xcworkspacedata
+!iOS/**/*.xcworkspace/xcshareddata/
+
+# Xcode
+*.swp
+*~.nib
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+
+# Swift Package Manager
+.swiftpm/
+Packages/
+Package.pins
+Package.resolved
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build/
+
+# General
+*.log
+*.tmp
+*.temp
+
+# IDE
+.vscode/
+*.sublime-*
+.claude/
+
+# Flame graphs and profiling
+*.folded
+*.svg
